@@ -201,6 +201,25 @@ def get_variable_entries_by_attributes(table, how=None, **kwargs):
 
 
 def get_all_variable_entries_by_attributes(how="any", **kwargs):
+    """retrieve variable entry from all cmor tables
+
+    Returns all variable entries from all CMIP6 cmor table depending
+    on kwargs.
+
+    Parameters
+    ----------
+    how : str
+        How to evaluate search results, can be ``"any"`` or ``"all"``.
+        Defaults to ``"all"``
+    **kwargs:
+        Keyword arguments used for searching in variable entry attributes.
+
+    Returns
+    -------
+    results : dict
+        Dictionary of cmip6 cmor tables with variable entries.
+
+    """
     results = {}
     for t in cmip6_table_list():
         entries = get_variable_entries_by_attributes(t, how=how, **kwargs)
