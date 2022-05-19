@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 
 import pandas as pd
-
 import tables
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
