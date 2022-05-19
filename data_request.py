@@ -1,9 +1,10 @@
 # from urllib.request import urlopen
 import json
-import os
 from pathlib import Path
 
 import pandas as pd
+
+import tables
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
 sheet_name = "Atmos%20CORE"
@@ -33,31 +34,45 @@ excel_url = (
 )
 
 
+# def cmip6_table_list(only=None):
+#     """get list of cmip6 cmor tables from github repo"""
+#     from github import Github
+
+#     grids = [
+#         "CMIP6_CV.json",
+#         "CMIP6_coordinate.json",
+#         "CMIP6_grids.json",
+#         "CMIP6_formula_terms.json",
+#     ]
+#     drops = []
+#     if only is None:
+#         only = "variables"
+#     if only == "variables":
+#         drops = ["CMIP6_input_example.json"] + grids
+#     elif only == "grid":
+#         return grids
+#     g = Github()
+#     repo = g.get_repo("PCMDI/cmip6-cmor-tables")
+#     contents = repo.get_contents("Tables")
+#     return [
+#         os.path.basename(c.path)
+#         for c in contents
+#         if os.path.basename(c.path) not in drops
+#     ]
+
+
 def cmip6_table_list(only=None):
     """get list of cmip6 cmor tables from github repo"""
-    from github import Github
-
-    grids = [
-        "CMIP6_CV.json",
-        "CMIP6_coordinate.json",
-        "CMIP6_grids.json",
-        "CMIP6_formula_terms.json",
-    ]
-    drops = []
     if only is None:
         only = "variables"
     if only == "variables":
-        drops = ["CMIP6_input_example.json"] + grids
-    elif only == "grid":
-        return grids
-    g = Github()
-    repo = g.get_repo("PCMDI/cmip6-cmor-tables")
-    contents = repo.get_contents("Tables")
-    return [
-        os.path.basename(c.path)
-        for c in contents
-        if os.path.basename(c.path) not in drops
-    ]
+        return tables.variables
+    elif only == "grids":
+        return tables.grids
+    elif only == "all":
+        return tables.variables + tables.grids
+    else:
+        raise Exception("only should be any variables, grids or all")
 
 
 def sheet_url(sheet_name):
