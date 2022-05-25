@@ -4,7 +4,9 @@ CORDEX CMIP6 data request table
 
 The csv table in this repository has been created from the data request [excel sheets](https://cordex.org/wp-content/uploads/2022/03/CORDEX_CMIP6_Atmosphere_Variable_List.xlsx) at the [CORDEX data request website](https://cordex.org/experiment-guidelines/cordex-cmip6/data-request/). The table is supposed to be machine readable and used for creating cmorization tables.
 
-## Introduction
+## Introduction [^1]
+
+[^1]: from https://docs.google.com/document/d/1qX6tF26jPY1IYRVZQ00FLSU7AY4hZJoC.
 
 The CORDEX-CMIP6 Data Request (DR) is a simplified analog of the CMIP6 Data Request for global models and defines all the quantities from CMIP6-driven CORDEX simulations that should be archived. The CORDEX-CMIP6 DR includes a number of Variable Lists (VLs) specifying output from different components (e.g. Atmosphere, Ocean, Aerosol, Land, Sea Ice, Rivers, etc.) of Regional Climate Models (RCMs). This document provides details on i) how to select output variables and their output intervals from the CORDEX-CMIP6 Variable Lists and ii) how to archive a number of specific variables.
 
