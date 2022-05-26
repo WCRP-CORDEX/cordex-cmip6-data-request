@@ -90,15 +90,16 @@ def retrieve_google_sheet(sheet_name, skiprows=4, clean=True):
 
 
 def freq_list(row):
+    """create list of frequencies from boolean entries ('x')"""
     if row["mon"] == "fx":
         return ["fx"]
     return [f for f in freqs if row[f] == "x"]
 
 
 def handle_inconsistencies(df):
-    """handle random inconsistencies"""
-    df.loc[df["priority"] == "TIER2", "priority"] = "TIER 2"
-    df.loc[df["priority"] == "TIER1", "priority"] = "TIER 1"
+    """handle some random inconsistencies"""
+    df.loc[df["priority"] == "TIER 2", "priority"] = "TIER2"
+    df.loc[df["priority"] == "TIER 1", "priority"] = "TIER1"
     return df
 
 
@@ -226,3 +227,57 @@ def get_all_variable_entries_by_attributes(how="any", **kwargs):
         if entries:
             results[t] = entries
     return results
+
+
+def create_table_header(name):
+    from datetime import date
+
+    today = date.today()
+    header = {
+        "data_specs_version": "01.00.33",
+        "cmor_version": "3.5",
+        "table_id": f"Table {name}",
+        "realm": "atmos",
+        "table_date": today.strftime("%d %B %Y"),
+        "missing_value": "1e20",
+        "int_missing_value": "-999",
+        "product": "model-output",
+        "approx_interval": "30.00000",
+        "generic_levels": "alevel alevhalf",
+        "mip_era": "CMIP6",
+        "Conventions": "CF-1.7 CMIP-6.2",
+    }
+    return header
+
+
+def create_cmor_table(name, df):
+    return dict(
+        Header=create_table_header(name),
+        variable_entry=df.set_index("output variable name").to_dict(
+            orient="index"
+        ),
+    )
+
+
+def create_cmor_tables(df, groupby="frequency"):
+    """Create cmor tables depending on grouped attribute"""
+
+    def name(g):
+        if isinstance(g, tuple):
+            return "_".join(g)
+        return g
+
+    gb = df.groupby(groupby)
+    return {
+        name(g): create_cmor_table(name(g), gb.get_group(g)) for g in gb.groups
+    }
+
+
+def table_to_json(table):
+    import json
+
+    table_id = table["Header"]["table_id"].split()[1]
+    filename = f"CORDEX-CMIP6_{table_id}.json"
+    print(f"writing: {filename}")
+    with open(filename, "w") as fp:
+        json.dump(table, fp, indent=4)
