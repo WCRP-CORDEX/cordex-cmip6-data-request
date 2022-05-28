@@ -4,6 +4,11 @@ CORDEX CMIP6 data request table
 
 The csv table in this repository has been created from the data request [excel sheets](https://cordex.org/wp-content/uploads/2022/03/CORDEX_CMIP6_Atmosphere_Variable_List.xlsx) at the [CORDEX data request website](https://cordex.org/experiment-guidelines/cordex-cmip6/data-request/). The table is supposed to be machine readable and used for creating cmorization tables.
 
+There are currently two main tables:
+
+* `cordex-cmip6-data-request.csv`: cordex data request
+* `cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from cmip6 data request (not complete yet)
+
 ## Introduction [^1]
 
 [^1]: from https://docs.google.com/document/d/1qX6tF26jPY1IYRVZQ00FLSU7AY4hZJoC.
