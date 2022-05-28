@@ -1,573 +1,567 @@
-output variable name,units,ag,long_name,standard_name,priority,comments,frequency
-tas,K,i,Near-Surface Air Temperature,air_temperature,CORE,,mon
-tas,K,i,Near-Surface Air Temperature,air_temperature,CORE,,day
-tas,K,i,Near-Surface Air Temperature,air_temperature,CORE,,1hr
-tasmax,K,,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon
-tasmax,K,,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,day
-tasmin,K,,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon
-tasmin,K,,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,day
-pr,kg m-2 s-1,a,Precipitation,precipitation_flux,CORE,,mon
-pr,kg m-2 s-1,a,Precipitation,precipitation_flux,CORE,,day
-pr,kg m-2 s-1,a,Precipitation,precipitation_flux,CORE,,1hr
-evspsbl,kg m-2 s-1,a,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,mon
-evspsbl,kg m-2 s-1,a,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,day
-evspsbl,kg m-2 s-1,a,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,1hr
-huss,1,i,Near-Surface Specific Humidity,specific_humidity,CORE,,mon
-huss,1,i,Near-Surface Specific Humidity,specific_humidity,CORE,,day
-huss,1,i,Near-Surface Specific Humidity,specific_humidity,CORE,,1hr
-hurs,%,i,Near-Surface Relative Humidity,relative_humidity,CORE,,mon
-hurs,%,i,Near-Surface Relative Humidity,relative_humidity,CORE,,day
-hurs,%,i,Near-Surface Relative Humidity,relative_humidity,CORE,,1hr
-ps,Pa,i,Surface Air Pressure,surface_air_pressure,CORE,,mon
-ps,Pa,i,Surface Air Pressure,surface_air_pressure,CORE,,day
-ps,Pa,i,Surface Air Pressure,surface_air_pressure,CORE,,1hr
-psl,Pa,i,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,mon
-psl,Pa,i,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,day
-psl,Pa,i,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,1hr
-sfcWind,m s-1,i,Near-Surface Wind Speed,wind_speed,CORE,,mon
-sfcWind,m s-1,i,Near-Surface Wind Speed,wind_speed,CORE,,day
-sfcWind,m s-1,i,Near-Surface Wind Speed,wind_speed,CORE,,1hr
-uas,m s-1,i,Eastward Near-Surface Wind,eastward_wind,CORE,,mon
-uas,m s-1,i,Eastward Near-Surface Wind,eastward_wind,CORE,,day
-uas,m s-1,i,Eastward Near-Surface Wind,eastward_wind,CORE,,1hr
-vas,m s-1,i,Northward Near-Surface Wind,northward_wind,CORE,,mon
-vas,m s-1,i,Northward Near-Surface Wind,northward_wind,CORE,,day
-vas,m s-1,i,Northward Near-Surface Wind,northward_wind,CORE,,1hr
-clt,%,a,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,mon
-clt,%,a,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,day
-clt,%,a,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,1hr
-rsds,W m-2,a,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,mon
-rsds,W m-2,a,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,day
-rsds,W m-2,a,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,1hr
-rlds,W m-2,a,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,mon
-rlds,W m-2,a,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,day
-rlds,W m-2,a,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,1hr
-orog,m,,Surface Altitude,surface_altitude,CORE,,fx
-sftlf,%,,Percentage of the Grid Cell Occupied by Land,land_area_fraction,CORE,,fx
-ts,K,i,Surface Temperature,surface_temperature,TIER1,,mon
-ts,K,i,Surface Temperature,surface_temperature,TIER1,,day
-ts,K,i,Surface Temperature,surface_temperature,TIER1,,1hr
-tsl,K,i,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,mon
-tsl,K,i,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,day
-tsl,K,i,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,6hr
-prc,kg m-2 s-1,a,Convective Precipitation,convective_precipitation_flux,TIER1,,mon
-prc,kg m-2 s-1,a,Convective Precipitation,convective_precipitation_flux,TIER1,,day
-prc,kg m-2 s-1,a,Convective Precipitation,convective_precipitation_flux,TIER1,,1hr
-prhmax,kg m-2 s-1,,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon
-prhmax,kg m-2 s-1,,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day
-prsn,kg m-2 s-1,a,Snowfall Flux,snowfall_flux,TIER1,,mon
-prsn,kg m-2 s-1,a,Snowfall Flux,snowfall_flux,TIER1,,day
-prsn,kg m-2 s-1,a,Snowfall Flux,snowfall_flux,TIER1,,1hr
-mrros,kg m-2 s-1,a,Surface Runoff,surface_runoff_flux,TIER1,,mon
-mrros,kg m-2 s-1,a,Surface Runoff,surface_runoff_flux,TIER1,,day
-mrros,kg m-2 s-1,a,Surface Runoff,surface_runoff_flux,TIER1,,6hr
-mrro,kg m-2 s-1,a,Total Runoff,runoff_flux,TIER1,,mon
-mrro,kg m-2 s-1,a,Total Runoff,runoff_flux,TIER1,,day
-mrro,kg m-2 s-1,a,Total Runoff,runoff_flux,TIER1,,6hr
-snm,kg m-2 s-1,a,Surface Snow Melt,surface_snow_melt_flux,TIER1,,mon
-snm,kg m-2 s-1,a,Surface Snow Melt,surface_snow_melt_flux,TIER1,,day
-snm,kg m-2 s-1,a,Surface Snow Melt,surface_snow_melt_flux,TIER1,,6hr
-tauu,Pa,a,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,mon
-tauu,Pa,a,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,day
-tauu,Pa,a,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,1hr
-tauv,Pa,a,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,mon
-tauv,Pa,a,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,day
-tauv,Pa,a,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,1hr
-sfcWindmax,m s-1,,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon
-sfcWindmax,m s-1,,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day
-sund,s,,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",mon
-sund,s,,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",day
-rsdsdir,W m-2,a,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,mon
-rsdsdir,W m-2,a,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,day
-rsdsdir,W m-2,a,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,1hr
-rsus,W m-2,a,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,mon
-rsus,W m-2,a,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,day
-rsus,W m-2,a,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,1hr
-rlus,W m-2,a,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,mon
-rlus,W m-2,a,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,day
-rlus,W m-2,a,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,1hr
-rlut,W m-2,a,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,mon
-rlut,W m-2,a,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,day
-rlut,W m-2,a,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,1hr
-rsdt,W m-2,a,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,mon
-rsdt,W m-2,a,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,day
-rsdt,W m-2,a,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,1hr
-rsut,W m-2,a,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,mon
-rsut,W m-2,a,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,day
-rsut,W m-2,a,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,1hr
-hfls,W m-2,a,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,mon
-hfls,W m-2,a,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,day
-hfls,W m-2,a,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,1hr
-hfss,W m-2,a,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,mon
-hfss,W m-2,a,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,day
-hfss,W m-2,a,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,1hr
-mrfso,kg m-2,i,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",mon
-mrfso,kg m-2,i,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",day
-mrfso,kg m-2,i,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",6hr
-mrfsos,kg m-2,i,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),mon
-mrfsos,kg m-2,i,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),day
-mrfsos,kg m-2,i,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),1hr
-mrfsol,kg m-2,i,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),mon
-mrfsol,kg m-2,i,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),day
-mrfsol,kg m-2,i,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),6hr
-mrso,kg m-2,i,Total Soil Moisture Content,"mass_content_of_water_in_soil
-",TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",mon
-mrso,kg m-2,i,Total Soil Moisture Content,"mass_content_of_water_in_soil
-",TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",day
-mrso,kg m-2,i,Total Soil Moisture Content,"mass_content_of_water_in_soil
-",TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",6hr
-mrsos,kg m-2,i,Moisture in Upper Portion of Soil Column,"mass_content_of_water_in_soil_layer
-",TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,mon
-mrsos,kg m-2,i,Moisture in Upper Portion of Soil Column,"mass_content_of_water_in_soil_layer
-",TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,day
-mrsos,kg m-2,i,Moisture in Upper Portion of Soil Column,"mass_content_of_water_in_soil_layer
-",TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,1hr
-mrsol,kg m-2,i,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,mon
-mrsol,kg m-2,i,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,day
-mrsol,kg m-2,i,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,6hr
-snw,kg m-2,i,Surface Snow Amount,surface_snow_amount,TIER1,,mon
-snw,kg m-2,i,Surface Snow Amount,surface_snow_amount,TIER1,,day
-snw,kg m-2,i,Surface Snow Amount,surface_snow_amount,TIER1,,6hr
-snc,%,i,Snow Area Percentage,surface_snow_area_fraction,TIER1,,mon
-snc,%,i,Snow Area Percentage,surface_snow_area_fraction,TIER1,,day
-snc,%,i,Snow Area Percentage,surface_snow_area_fraction,TIER1,,6hr
-snd,m,i,Snow Depth,surface_snow_thickness,TIER1,,mon
-snd,m,i,Snow Depth,surface_snow_thickness,TIER1,,day
-snd,m,i,Snow Depth,surface_snow_thickness,TIER1,,6hr
-siconca,%,,Sea-Ice Area Percentage (Atmospheric Grid),sea_ice_area_fraction,TIER1,daily and monthly means,mon
-siconca,%,,Sea-Ice Area Percentage (Atmospheric Grid),sea_ice_area_fraction,TIER1,daily and monthly means,day
-zmla,m,i,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,mon
-zmla,m,i,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,day
-zmla,m,i,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,1hr
-prw,kg m-2,i,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,mon
-prw,kg m-2,i,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,day
-prw,kg m-2,i,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,1hr
-clwvi,kg m-2,i,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,mon
-clwvi,kg m-2,i,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,day
-clwvi,kg m-2,i,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,1hr
-clivi,kg m-2,i,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,mon
-clivi,kg m-2,i,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,day
-clivi,kg m-2,i,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,1hr
-ua1000,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua1000,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua1000,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua925,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua925,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua925,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua850,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua850,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua850,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua700,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua700,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua700,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua600,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua600,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua600,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua500,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua500,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua500,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua400,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua400,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua400,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua300,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua300,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua300,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua250,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua250,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua250,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-ua200,m s-1,i,Eastward Wind,eastward_wind,TIER1,,mon
-ua200,m s-1,i,Eastward Wind,eastward_wind,TIER1,,day
-ua200,m s-1,i,Eastward Wind,eastward_wind,TIER1,,6hr
-va1000,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va1000,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va1000,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va925,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va925,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va925,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va850,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va850,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va850,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va700,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va700,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va700,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va600,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va600,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va600,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va500,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va500,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va500,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va400,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va400,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va400,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va300,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va300,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va300,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va250,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va250,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va250,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-va200,m s-1,i,Northward Wind,northward_wind,TIER1,,mon
-va200,m s-1,i,Northward Wind,northward_wind,TIER1,,day
-va200,m s-1,i,Northward Wind,northward_wind,TIER1,,6hr
-ta1000,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta1000,K,i,Air Temperature,air_temperature,TIER1,,day
-ta1000,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta925,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta925,K,i,Air Temperature,air_temperature,TIER1,,day
-ta925,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta850,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta850,K,i,Air Temperature,air_temperature,TIER1,,day
-ta850,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta700,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta700,K,i,Air Temperature,air_temperature,TIER1,,day
-ta700,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta600,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta600,K,i,Air Temperature,air_temperature,TIER1,,day
-ta600,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta500,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta500,K,i,Air Temperature,air_temperature,TIER1,,day
-ta500,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta400,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta400,K,i,Air Temperature,air_temperature,TIER1,,day
-ta400,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta300,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta300,K,i,Air Temperature,air_temperature,TIER1,,day
-ta300,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta250,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta250,K,i,Air Temperature,air_temperature,TIER1,,day
-ta250,K,i,Air Temperature,air_temperature,TIER1,,6hr
-ta200,K,i,Air Temperature,air_temperature,TIER1,,mon
-ta200,K,i,Air Temperature,air_temperature,TIER1,,day
-ta200,K,i,Air Temperature,air_temperature,TIER1,,6hr
-hus1000,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus1000,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus1000,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus925,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus925,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus925,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus850,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus850,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus850,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus700,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus700,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus700,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus600,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus600,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus600,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus500,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus500,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus500,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus400,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus400,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus400,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus300,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus300,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus300,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus250,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus250,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus250,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-hus200,1,i,Specific Humidity,specific_humidity,TIER1,,mon
-hus200,1,i,Specific Humidity,specific_humidity,TIER1,,day
-hus200,1,i,Specific Humidity,specific_humidity,TIER1,,6hr
-zg1000,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg1000,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg1000,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg925,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg925,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg925,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg850,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg850,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg850,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg700,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg700,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg700,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg600,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg600,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg600,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg500,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg500,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg500,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg400,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg400,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg400,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg300,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg300,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg300,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg250,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg250,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg250,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-zg200,m,i,Geopotential Height,geopotential_height,TIER1,,mon
-zg200,m,i,Geopotential Height,geopotential_height,TIER1,,day
-zg200,m,i,Geopotential Height,geopotential_height,TIER1,,6hr
-wa1000,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa1000,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa1000,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa925,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa925,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa925,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa850,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa850,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa850,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa700,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa700,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa700,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa600,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa600,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa600,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa500,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa500,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa500,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa400,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa400,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa400,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa300,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa300,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa300,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa250,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa250,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa250,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-wa200,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,mon
-wa200,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,day
-wa200,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER1,,6hr
-ua50m,m s-1,i,Eastward Wind at 50m,eastward_wind,TIER1,,mon
-ua50m,m s-1,i,Eastward Wind at 50m,eastward_wind,TIER1,,day
-ua50m,m s-1,i,Eastward Wind at 50m,eastward_wind,TIER1,,1hr
-ua100m,m s-1,i,Eastward Wind at 100m,eastward_wind,TIER1,,mon
-ua100m,m s-1,i,Eastward Wind at 100m,eastward_wind,TIER1,,day
-ua100m,m s-1,i,Eastward Wind at 100m,eastward_wind,TIER1,,1hr
-ua150m,m s-1,i,Eastward Wind at 150m,eastward_wind,TIER1,,mon
-ua150m,m s-1,i,Eastward Wind at 150m,eastward_wind,TIER1,,day
-ua150m,m s-1,i,Eastward Wind at 150m,eastward_wind,TIER1,,1hr
-va50m,m s-1,i,Northward Wind at 50m,northward_wind,TIER1,,mon
-va50m,m s-1,i,Northward Wind at 50m,northward_wind,TIER1,,day
-va50m,m s-1,i,Northward Wind at 50m,northward_wind,TIER1,,1hr
-va100m,m s-1,i,Northward Wind at 100m,northward_wind,TIER1,,mon
-va100m,m s-1,i,Northward Wind at 100m,northward_wind,TIER1,,day
-va100m,m s-1,i,Northward Wind at 100m,northward_wind,TIER1,,1hr
-va150m,m s-1,i,Northward Wind at 150m,northward_wind,TIER1,,mon
-va150m,m s-1,i,Northward Wind at 150m,northward_wind,TIER1,,day
-va150m,m s-1,i,Northward Wind at 150m,northward_wind,TIER1,,1hr
-ta50m,K,i,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,mon
-ta50m,K,i,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,day
-ta50m,K,i,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,1hr
-hus50m,1,i,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,mon
-hus50m,1,i,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,day
-hus50m,1,i,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,1hr
-evspsblpot,kg m-2 s-1,a,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,mon
-evspsblpot,kg m-2 s-1,a,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,day
-evspsblpot,kg m-2 s-1,a,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,1hr
-wsgsmax,m s-1,,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust ,TIER2,,mon
-wsgsmax,m s-1,,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust ,TIER2,,day
-clh,%,a,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,mon
-clh,%,a,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,day
-clh,%,a,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,6hr
-clm,%,a,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,mon
-clm,%,a,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,day
-clm,%,a,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,6hr
-cll,%,a,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,mon
-cll,%,a,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,day
-cll,%,a,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,6hr
-rsdscs,W m-2,a,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon
-rsdscs,W m-2,a,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day
-rsdscs,W m-2,a,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
-rldscs,W m-2,a,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon
-rldscs,W m-2,a,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day
-rldscs,W m-2,a,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
-rsuscs,W m-2,a,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon
-rsuscs,W m-2,a,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day
-rsuscs,W m-2,a,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
-rluscs,W m-2,a,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon
-rluscs,W m-2,a,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day
-rluscs,W m-2,a,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
-rsutcs,W m-2,a,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,mon
-rsutcs,W m-2,a,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,day
-rsutcs,W m-2,a,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,6hr
-rlutcs,W m-2,a,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,mon
-rlutcs,W m-2,a,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,day
-rlutcs,W m-2,a,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,6hr
-z0,m,i,Surface Roughness Length,surface_roughness_length,TIER2,,mon
-z0,m,i,Surface Roughness Length,surface_roughness_length,TIER2,,day
-CAPE,J kg-1,i,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon
-CAPE,J kg-1,i,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day
-CAPE,J kg-1,i,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,1hr
-LI,K,i,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon
-LI,K,i,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day
-LI,K,i,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,1hr
-CIN,J kg-1,i,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon
-CIN,J kg-1,i,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day
-CIN,J kg-1,i,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,1hr
-CAPEmax,J kg-1,,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon
-CAPEmax,J kg-1,,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day
-LImax,K,,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon
-LImax,K,,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day
-CINmax,J kg-1,,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon
-CINmax,J kg-1,,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day
-od550aer ,1,,atmosphere_optical_thickness_due_to_ambient_aerosol_particles,atmosphere_optical_thickness_due_to_ambient_aerosol_particles,TIER2,,mon
-ua150,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua150,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua150,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua100,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua100,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua100,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua70,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua70,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua70,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua50,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua50,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua50,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua30,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua30,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua30,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua20,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua20,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua20,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-ua10,m s-1,i,Eastward Wind,eastward_wind,TIER2,,mon
-ua10,m s-1,i,Eastward Wind,eastward_wind,TIER2,,day
-ua10,m s-1,i,Eastward Wind,eastward_wind,TIER2,,6hr
-va150,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va150,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va150,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va100,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va100,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va100,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va70,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va70,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va70,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va50,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va50,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va50,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va30,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va30,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va30,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va20,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va20,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va20,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-va10,m s-1,i,Northward Wind,northward_wind,TIER2,,mon
-va10,m s-1,i,Northward Wind,northward_wind,TIER2,,day
-va10,m s-1,i,Northward Wind,northward_wind,TIER2,,6hr
-ta150,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta150,K,i,Air Temperature,air_temperature,TIER2,,day
-ta150,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta100,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta100,K,i,Air Temperature,air_temperature,TIER2,,day
-ta100,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta70,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta70,K,i,Air Temperature,air_temperature,TIER2,,day
-ta70,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta50,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta50,K,i,Air Temperature,air_temperature,TIER2,,day
-ta50,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta30,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta30,K,i,Air Temperature,air_temperature,TIER2,,day
-ta30,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta20,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta20,K,i,Air Temperature,air_temperature,TIER2,,day
-ta20,K,i,Air Temperature,air_temperature,TIER2,,6hr
-ta10,K,i,Air Temperature,air_temperature,TIER2,,mon
-ta10,K,i,Air Temperature,air_temperature,TIER2,,day
-ta10,K,i,Air Temperature,air_temperature,TIER2,,6hr
-hus150,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus150,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus150,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus100,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus100,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus100,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus70,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus70,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus70,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus50,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus50,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus50,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus30,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus30,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus30,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus20,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus20,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus20,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-hus10,1,i,Specific Humidity,specific_humidity,TIER2,,mon
-hus10,1,i,Specific Humidity,specific_humidity,TIER2,,day
-hus10,1,i,Specific Humidity,specific_humidity,TIER2,,6hr
-zg150,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg150,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg150,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg100,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg100,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg100,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg70,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg70,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg70,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg50,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg50,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg50,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg30,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg30,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg30,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg20,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg20,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg20,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-zg10,m,i,Geopotential Height,geopotential_height,TIER2,,mon
-zg10,m,i,Geopotential Height,geopotential_height,TIER2,,day
-zg10,m,i,Geopotential Height,geopotential_height,TIER2,,6hr
-wa150,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa150,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa150,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa100,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa100,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa100,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa70,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa70,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa70,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa50,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa50,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa50,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa30,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa30,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa30,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa20,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa20,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa20,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-wa10,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,mon
-wa10,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,day
-wa10,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,,6hr
-ua750,m s-1,i,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,mon
-ua750,m s-1,i,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,day
-ua750,m s-1,i,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,6hr
-va750,m s-1,i,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,mon
-va750,m s-1,i,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,day
-va750,m s-1,i,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,6hr
-ta750,K,i,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,mon
-ta750,K,i,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,day
-ta750,K,i,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,6hr
-hus750,1,i,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,mon
-hus750,1,i,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,day
-hus750,1,i,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,6hr
-zg750,m,i,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,mon
-zg750,m,i,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,day
-zg750,m,i,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,6hr
-wa750,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,mon
-wa750,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,day
-wa750,m s-1,i,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,6hr
-ua200m,m s-1,i,Eastward Wind at 200m,eastward_wind,TIER2,,mon
-ua200m,m s-1,i,Eastward Wind at 200m,eastward_wind,TIER2,,day
-ua200m,m s-1,i,Eastward Wind at 200m,eastward_wind,TIER2,,1hr
-ua250m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,mon
-ua250m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,day
-ua250m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,1hr
-ua300m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,mon
-ua300m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,day
-ua300m,m s-1,i,Eastward Wind at 250m,eastward_wind,TIER2,,1hr
-va200m,m s-1,i,Northward Wind at 200m,northward_wind,TIER1,,mon
-va200m,m s-1,i,Northward Wind at 200m,northward_wind,TIER1,,day
-va200m,m s-1,i,Northward Wind at 200m,northward_wind,TIER1,,1hr
-va250m,m s-1,i,Northward Wind at 250m,northward_wind,TIER1,,mon
-va250m,m s-1,i,Northward Wind at 250m,northward_wind,TIER1,,day
-va250m,m s-1,i,Northward Wind at 250m,northward_wind,TIER1,,1hr
-va300m,m s-1,i,Northward Wind at 350m,northward_wind,TIER1,,mon
-va300m,m s-1,i,Northward Wind at 350m,northward_wind,TIER1,,day
-va300m,m s-1,i,Northward Wind at 350m,northward_wind,TIER1,,1hr
-sftgif,%,,Percentage of the Grid Cell Covered by Glacier,land_ice_area_fraction,TIER2,,fx
-mrsofc,kg m-2,,Capacity of Soil to Store Water  (Field Capacity),soil_moisture_content_at_field_capacity,TIER2,,fx
-rootd,m,,Maximum Root Depth,root_depth,TIER2,,fx
-sftlaf,%,,Percentage of the Grid Cell Occupied by Lake,lake_area_fraction,TIER2,not in CMIP or in CF ,fx
-sfturf,%,,Percentage of the Grid Cell Occupied by City,urban_area_fraction,TIER2,not in CMIP or in CF ,fx
-dtb,m,,Depth to Bedrock,bedrock_depth,TIER2,not in CMIP or in CF (lower boundary of land surface models),fx
-areacella,m2,,Atmosphere Grid-Cell Area,cell_area,TIER2,,fx
+out_name,units,long_name,standard_name,priority,comments,frequency
+tas,K,Near-Surface Air Temperature,air_temperature,CORE,,mon
+tas,K,Near-Surface Air Temperature,air_temperature,CORE,,day
+tas,K,Near-Surface Air Temperature,air_temperature,CORE,,1hrPt
+tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon
+tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,day
+tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon
+tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,day
+pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,mon
+pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,day
+pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,1hr
+evspsbl,kg m-2 s-1,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,mon
+evspsbl,kg m-2 s-1,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,day
+evspsbl,kg m-2 s-1,Evaporation Including Sublimation and Transpiration,water_evapotranspiration_flux,CORE,,1hr
+huss,1,Near-Surface Specific Humidity,specific_humidity,CORE,,mon
+huss,1,Near-Surface Specific Humidity,specific_humidity,CORE,,day
+huss,1,Near-Surface Specific Humidity,specific_humidity,CORE,,1hrPt
+hurs,%,Near-Surface Relative Humidity,relative_humidity,CORE,,mon
+hurs,%,Near-Surface Relative Humidity,relative_humidity,CORE,,day
+hurs,%,Near-Surface Relative Humidity,relative_humidity,CORE,,1hrPt
+ps,Pa,Surface Air Pressure,surface_air_pressure,CORE,,mon
+ps,Pa,Surface Air Pressure,surface_air_pressure,CORE,,day
+ps,Pa,Surface Air Pressure,surface_air_pressure,CORE,,1hrPt
+psl,Pa,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,mon
+psl,Pa,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,day
+psl,Pa,Sea Level Pressure,air_pressure_at_mean_sea_level,CORE,,1hrPt
+sfcWind,m s-1,Near-Surface Wind Speed,wind_speed,CORE,,mon
+sfcWind,m s-1,Near-Surface Wind Speed,wind_speed,CORE,,day
+sfcWind,m s-1,Near-Surface Wind Speed,wind_speed,CORE,,1hrPt
+uas,m s-1,Eastward Near-Surface Wind,eastward_wind,CORE,,mon
+uas,m s-1,Eastward Near-Surface Wind,eastward_wind,CORE,,day
+uas,m s-1,Eastward Near-Surface Wind,eastward_wind,CORE,,1hrPt
+vas,m s-1,Northward Near-Surface Wind,northward_wind,CORE,,mon
+vas,m s-1,Northward Near-Surface Wind,northward_wind,CORE,,day
+vas,m s-1,Northward Near-Surface Wind,northward_wind,CORE,,1hrPt
+clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,mon
+clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,day
+clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,1hr
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,mon
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,day
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,1hr
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,mon
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,day
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,1hr
+orog,m,Surface Altitude,surface_altitude,CORE,,fx
+sftlf,%,Percentage of the Grid Cell Occupied by Land,land_area_fraction,CORE,,fx
+ts,K,Surface Temperature,surface_temperature,TIER1,,mon
+ts,K,Surface Temperature,surface_temperature,TIER1,,day
+ts,K,Surface Temperature,surface_temperature,TIER1,,1hrPt
+tsl,K,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,mon
+tsl,K,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,day
+tsl,K,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer (3D variable). Reported as missing for grid cells with no land.,6hrPt
+prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,mon
+prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,day
+prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,1hr
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day
+prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,mon
+prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,day
+prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,1hr
+mrros,kg m-2 s-1,Surface Runoff,surface_runoff_flux,TIER1,,mon
+mrros,kg m-2 s-1,Surface Runoff,surface_runoff_flux,TIER1,,day
+mrros,kg m-2 s-1,Surface Runoff,surface_runoff_flux,TIER1,,6hr
+mrro,kg m-2 s-1,Total Runoff,runoff_flux,TIER1,,mon
+mrro,kg m-2 s-1,Total Runoff,runoff_flux,TIER1,,day
+mrro,kg m-2 s-1,Total Runoff,runoff_flux,TIER1,,6hr
+snm,kg m-2 s-1,Surface Snow Melt,surface_snow_melt_flux,TIER1,,mon
+snm,kg m-2 s-1,Surface Snow Melt,surface_snow_melt_flux,TIER1,,day
+snm,kg m-2 s-1,Surface Snow Melt,surface_snow_melt_flux,TIER1,,6hr
+tauu,Pa,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,mon
+tauu,Pa,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,day
+tauu,Pa,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,TIER1,,1hr
+tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,mon
+tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,day
+tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,1hr
+sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon
+sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day
+sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",mon
+sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",day
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,mon
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,day
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,1hr
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,mon
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,day
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,1hr
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,mon
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,day
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,1hr
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,mon
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,day
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,1hr
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,mon
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,day
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,1hr
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,mon
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,day
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,1hr
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,mon
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,day
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,1hr
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,mon
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,day
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,1hr
+mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",mon
+mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",day
+mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",6hrPt
+mrfsos,kg m-2,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),mon
+mrfsos,kg m-2,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),day
+mrfsos,kg m-2,Frozen Water Content in Upper Portion of Soil Column,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP),1hrPt
+mrfsol,kg m-2,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),mon
+mrfsol,kg m-2,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),day
+mrfsol,kg m-2,Frozen Water Content of Soil Layer,frozen_water_content_of_soil_layer,TIER1,The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP),6hrPt
+mrso,kg m-2,Total Soil Moisture Content,mass_content_of_water_in_soil,TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",mon
+mrso,kg m-2,Total Soil Moisture Content,mass_content_of_water_in_soil,TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",day
+mrso,kg m-2,Total Soil Moisture Content,mass_content_of_water_in_soil,TIER1,"The mass of water in all phases per unit area, summed over all soil layers.",6hrPt
+mrsos,kg m-2,Moisture in Upper Portion of Soil Column,mass_content_of_water_in_soil_layer,TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,mon
+mrsos,kg m-2,Moisture in Upper Portion of Soil Column,mass_content_of_water_in_soil_layer,TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,day
+mrsos,kg m-2,Moisture in Upper Portion of Soil Column,mass_content_of_water_in_soil_layer,TIER1,The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.,1hrPt
+mrsol,kg m-2,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,mon
+mrsol,kg m-2,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,day
+mrsol,kg m-2,Total Water Content of Soil Layer,mass_content_of_water_in_soil_layer,TIER1, The mass of water in all phases in each soil layer (3D variable). Reported as missing for grid cells with no land.,6hrPt
+snw,kg m-2,Surface Snow Amount,surface_snow_amount,TIER1,,mon
+snw,kg m-2,Surface Snow Amount,surface_snow_amount,TIER1,,day
+snw,kg m-2,Surface Snow Amount,surface_snow_amount,TIER1,,6hrPt
+snc,%,Snow Area Percentage,surface_snow_area_fraction,TIER1,,mon
+snc,%,Snow Area Percentage,surface_snow_area_fraction,TIER1,,day
+snc,%,Snow Area Percentage,surface_snow_area_fraction,TIER1,,6hrPt
+snd,m,Snow Depth,surface_snow_thickness,TIER1,,mon
+snd,m,Snow Depth,surface_snow_thickness,TIER1,,day
+snd,m,Snow Depth,surface_snow_thickness,TIER1,,6hrPt
+siconca,%,Sea-Ice Area Percentage (Atmospheric Grid),sea_ice_area_fraction,TIER1,daily and monthly means,mon
+siconca,%,Sea-Ice Area Percentage (Atmospheric Grid),sea_ice_area_fraction,TIER1,daily and monthly means,day
+zmla,m,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,mon
+zmla,m,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,day
+zmla,m,Height of Boundary Layer,atmosphere_boundary_layer_thickness,TIER1,,1hrPt
+prw,kg m-2,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,mon
+prw,kg m-2,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,day
+prw,kg m-2,Water Vapor Path,atmosphere_mass_content_of_water_vapor,TIER1,,1hrPt
+clwvi,kg m-2,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,mon
+clwvi,kg m-2,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,day
+clwvi,kg m-2,Condensed Water Path,atmosphere_mass_content_of_cloud_condensed_water,TIER1,,1hrPt
+clivi,kg m-2,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,mon
+clivi,kg m-2,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,day
+clivi,kg m-2,Ice Water Path,atmosphere_mass_content_of_cloud_ice,TIER1,,1hrPt
+ua1000,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua1000,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua1000,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua925,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua925,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua925,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua850,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua850,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua850,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua700,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua700,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua700,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua600,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua600,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua600,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua500,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua500,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua500,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua400,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua400,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua400,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua300,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua300,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua300,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua250,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua250,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua250,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+ua200,m s-1,Eastward Wind,eastward_wind,TIER1,,mon
+ua200,m s-1,Eastward Wind,eastward_wind,TIER1,,day
+ua200,m s-1,Eastward Wind,eastward_wind,TIER1,,6hrPt
+va1000,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va1000,m s-1,Northward Wind,northward_wind,TIER1,,day
+va1000,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va925,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va925,m s-1,Northward Wind,northward_wind,TIER1,,day
+va925,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va850,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va850,m s-1,Northward Wind,northward_wind,TIER1,,day
+va850,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va700,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va700,m s-1,Northward Wind,northward_wind,TIER1,,day
+va700,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va600,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va600,m s-1,Northward Wind,northward_wind,TIER1,,day
+va600,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va500,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va500,m s-1,Northward Wind,northward_wind,TIER1,,day
+va500,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va400,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va400,m s-1,Northward Wind,northward_wind,TIER1,,day
+va400,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va300,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va300,m s-1,Northward Wind,northward_wind,TIER1,,day
+va300,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va250,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va250,m s-1,Northward Wind,northward_wind,TIER1,,day
+va250,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+va200,m s-1,Northward Wind,northward_wind,TIER1,,mon
+va200,m s-1,Northward Wind,northward_wind,TIER1,,day
+va200,m s-1,Northward Wind,northward_wind,TIER1,,6hrPt
+ta1000,K,Air Temperature,air_temperature,TIER1,,mon
+ta1000,K,Air Temperature,air_temperature,TIER1,,day
+ta1000,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta925,K,Air Temperature,air_temperature,TIER1,,mon
+ta925,K,Air Temperature,air_temperature,TIER1,,day
+ta925,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta850,K,Air Temperature,air_temperature,TIER1,,mon
+ta850,K,Air Temperature,air_temperature,TIER1,,day
+ta850,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta700,K,Air Temperature,air_temperature,TIER1,,mon
+ta700,K,Air Temperature,air_temperature,TIER1,,day
+ta700,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta600,K,Air Temperature,air_temperature,TIER1,,mon
+ta600,K,Air Temperature,air_temperature,TIER1,,day
+ta600,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta500,K,Air Temperature,air_temperature,TIER1,,mon
+ta500,K,Air Temperature,air_temperature,TIER1,,day
+ta500,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta400,K,Air Temperature,air_temperature,TIER1,,mon
+ta400,K,Air Temperature,air_temperature,TIER1,,day
+ta400,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta300,K,Air Temperature,air_temperature,TIER1,,mon
+ta300,K,Air Temperature,air_temperature,TIER1,,day
+ta300,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta250,K,Air Temperature,air_temperature,TIER1,,mon
+ta250,K,Air Temperature,air_temperature,TIER1,,day
+ta250,K,Air Temperature,air_temperature,TIER1,,6hrPt
+ta200,K,Air Temperature,air_temperature,TIER1,,mon
+ta200,K,Air Temperature,air_temperature,TIER1,,day
+ta200,K,Air Temperature,air_temperature,TIER1,,6hrPt
+hus1000,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus1000,1,Specific Humidity,specific_humidity,TIER1,,day
+hus1000,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus925,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus925,1,Specific Humidity,specific_humidity,TIER1,,day
+hus925,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus850,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus850,1,Specific Humidity,specific_humidity,TIER1,,day
+hus850,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus700,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus700,1,Specific Humidity,specific_humidity,TIER1,,day
+hus700,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus600,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus600,1,Specific Humidity,specific_humidity,TIER1,,day
+hus600,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus500,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus500,1,Specific Humidity,specific_humidity,TIER1,,day
+hus500,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus400,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus400,1,Specific Humidity,specific_humidity,TIER1,,day
+hus400,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus300,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus300,1,Specific Humidity,specific_humidity,TIER1,,day
+hus300,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus250,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus250,1,Specific Humidity,specific_humidity,TIER1,,day
+hus250,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+hus200,1,Specific Humidity,specific_humidity,TIER1,,mon
+hus200,1,Specific Humidity,specific_humidity,TIER1,,day
+hus200,1,Specific Humidity,specific_humidity,TIER1,,6hrPt
+zg1000,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg1000,m,Geopotential Height,geopotential_height,TIER1,,day
+zg1000,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg925,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg925,m,Geopotential Height,geopotential_height,TIER1,,day
+zg925,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg850,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg850,m,Geopotential Height,geopotential_height,TIER1,,day
+zg850,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg700,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg700,m,Geopotential Height,geopotential_height,TIER1,,day
+zg700,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg600,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg600,m,Geopotential Height,geopotential_height,TIER1,,day
+zg600,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg500,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg500,m,Geopotential Height,geopotential_height,TIER1,,day
+zg500,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg400,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg400,m,Geopotential Height,geopotential_height,TIER1,,day
+zg400,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg300,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg300,m,Geopotential Height,geopotential_height,TIER1,,day
+zg300,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg250,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg250,m,Geopotential Height,geopotential_height,TIER1,,day
+zg250,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+zg200,m,Geopotential Height,geopotential_height,TIER1,,mon
+zg200,m,Geopotential Height,geopotential_height,TIER1,,day
+zg200,m,Geopotential Height,geopotential_height,TIER1,,6hrPt
+wa1000,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa1000,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa1000,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa925,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa925,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa925,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa850,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa850,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa850,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa700,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa700,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa700,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa600,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa600,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa600,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa500,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa500,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa500,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa400,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa400,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa400,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa300,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa300,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa300,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa250,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa250,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa250,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+wa200,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,mon
+wa200,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,day
+wa200,m s-1,Upward Air Velocity,upward_air_velocity,TIER1,,6hrPt
+ua50m,m s-1,Eastward Wind at 50m,eastward_wind,TIER1,,mon
+ua50m,m s-1,Eastward Wind at 50m,eastward_wind,TIER1,,day
+ua50m,m s-1,Eastward Wind at 50m,eastward_wind,TIER1,,1hrPt
+ua100m,m s-1,Eastward Wind at 100m,eastward_wind,TIER1,,mon
+ua100m,m s-1,Eastward Wind at 100m,eastward_wind,TIER1,,day
+ua100m,m s-1,Eastward Wind at 100m,eastward_wind,TIER1,,1hrPt
+ua150m,m s-1,Eastward Wind at 150m,eastward_wind,TIER1,,mon
+ua150m,m s-1,Eastward Wind at 150m,eastward_wind,TIER1,,day
+ua150m,m s-1,Eastward Wind at 150m,eastward_wind,TIER1,,1hrPt
+va50m,m s-1,Northward Wind at 50m,northward_wind,TIER1,,mon
+va50m,m s-1,Northward Wind at 50m,northward_wind,TIER1,,day
+va50m,m s-1,Northward Wind at 50m,northward_wind,TIER1,,1hrPt
+va100m,m s-1,Northward Wind at 100m,northward_wind,TIER1,,mon
+va100m,m s-1,Northward Wind at 100m,northward_wind,TIER1,,day
+va100m,m s-1,Northward Wind at 100m,northward_wind,TIER1,,1hrPt
+va150m,m s-1,Northward Wind at 150m,northward_wind,TIER1,,mon
+va150m,m s-1,Northward Wind at 150m,northward_wind,TIER1,,day
+va150m,m s-1,Northward Wind at 150m,northward_wind,TIER1,,1hrPt
+ta50m,K,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,mon
+ta50m,K,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,day
+ta50m,K,Air Temperature at 50m,air_temperature,TIER1, requested for urban modeling,1hrPt
+hus50m,1,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,mon
+hus50m,1,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,day
+hus50m,1,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban modeling,1hrPt
+evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,mon
+evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,day
+evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,1hr
+wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,mon
+wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,day
+clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,mon
+clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,day
+clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,6hr
+clm,%,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,mon
+clm,%,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,day
+clm,%,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,between 680 and 440 hPa,6hr
+cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,mon
+cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,day
+cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,6hr
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,mon
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,day
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,6hr
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,mon
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,day
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,6hr
+z0,m,Surface Roughness Length,surface_roughness_length,TIER2,,mon
+z0,m,Surface Roughness Length,surface_roughness_length,TIER2,,day
+CAPE,J kg-1,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon
+CAPE,J kg-1,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day
+CAPE,J kg-1,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,1hrPt
+LI,K,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon
+LI,K,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day
+LI,K,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,1hrPt
+CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon
+CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day
+CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,1hrPt
+CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon
+CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day
+LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon
+LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day
+CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon
+CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day
+od550aer ,1,atmosphere_optical_thickness_due_to_ambient_aerosol_particles,atmosphere_optical_thickness_due_to_ambient_aerosol_particles,TIER2,,mon
+ua150,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua150,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua150,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua100,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua100,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua100,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua70,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua70,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua70,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua50,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua50,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua50,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua30,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua30,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua30,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua20,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua20,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua20,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+ua10,m s-1,Eastward Wind,eastward_wind,TIER2,,mon
+ua10,m s-1,Eastward Wind,eastward_wind,TIER2,,day
+ua10,m s-1,Eastward Wind,eastward_wind,TIER2,,6hrPt
+va150,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va150,m s-1,Northward Wind,northward_wind,TIER2,,day
+va150,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va100,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va100,m s-1,Northward Wind,northward_wind,TIER2,,day
+va100,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va70,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va70,m s-1,Northward Wind,northward_wind,TIER2,,day
+va70,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va50,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va50,m s-1,Northward Wind,northward_wind,TIER2,,day
+va50,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va30,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va30,m s-1,Northward Wind,northward_wind,TIER2,,day
+va30,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va20,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va20,m s-1,Northward Wind,northward_wind,TIER2,,day
+va20,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+va10,m s-1,Northward Wind,northward_wind,TIER2,,mon
+va10,m s-1,Northward Wind,northward_wind,TIER2,,day
+va10,m s-1,Northward Wind,northward_wind,TIER2,,6hrPt
+ta150,K,Air Temperature,air_temperature,TIER2,,mon
+ta150,K,Air Temperature,air_temperature,TIER2,,day
+ta150,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta100,K,Air Temperature,air_temperature,TIER2,,mon
+ta100,K,Air Temperature,air_temperature,TIER2,,day
+ta100,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta70,K,Air Temperature,air_temperature,TIER2,,mon
+ta70,K,Air Temperature,air_temperature,TIER2,,day
+ta70,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta50,K,Air Temperature,air_temperature,TIER2,,mon
+ta50,K,Air Temperature,air_temperature,TIER2,,day
+ta50,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta30,K,Air Temperature,air_temperature,TIER2,,mon
+ta30,K,Air Temperature,air_temperature,TIER2,,day
+ta30,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta20,K,Air Temperature,air_temperature,TIER2,,mon
+ta20,K,Air Temperature,air_temperature,TIER2,,day
+ta20,K,Air Temperature,air_temperature,TIER2,,6hrPt
+ta10,K,Air Temperature,air_temperature,TIER2,,mon
+ta10,K,Air Temperature,air_temperature,TIER2,,day
+ta10,K,Air Temperature,air_temperature,TIER2,,6hrPt
+hus150,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus150,1,Specific Humidity,specific_humidity,TIER2,,day
+hus150,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus100,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus100,1,Specific Humidity,specific_humidity,TIER2,,day
+hus100,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus70,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus70,1,Specific Humidity,specific_humidity,TIER2,,day
+hus70,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus50,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus50,1,Specific Humidity,specific_humidity,TIER2,,day
+hus50,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus30,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus30,1,Specific Humidity,specific_humidity,TIER2,,day
+hus30,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus20,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus20,1,Specific Humidity,specific_humidity,TIER2,,day
+hus20,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+hus10,1,Specific Humidity,specific_humidity,TIER2,,mon
+hus10,1,Specific Humidity,specific_humidity,TIER2,,day
+hus10,1,Specific Humidity,specific_humidity,TIER2,,6hrPt
+zg150,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg150,m,Geopotential Height,geopotential_height,TIER2,,day
+zg150,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg100,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg100,m,Geopotential Height,geopotential_height,TIER2,,day
+zg100,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg70,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg70,m,Geopotential Height,geopotential_height,TIER2,,day
+zg70,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg50,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg50,m,Geopotential Height,geopotential_height,TIER2,,day
+zg50,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg30,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg30,m,Geopotential Height,geopotential_height,TIER2,,day
+zg30,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg20,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg20,m,Geopotential Height,geopotential_height,TIER2,,day
+zg20,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+zg10,m,Geopotential Height,geopotential_height,TIER2,,mon
+zg10,m,Geopotential Height,geopotential_height,TIER2,,day
+zg10,m,Geopotential Height,geopotential_height,TIER2,,6hrPt
+wa150,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa150,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa150,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa100,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa100,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa100,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa70,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa70,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa70,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa50,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa50,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa50,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa30,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa30,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa30,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa20,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa20,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa20,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+wa10,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,mon
+wa10,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,day
+wa10,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,,6hrPt
+ua750,m s-1,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,mon
+ua750,m s-1,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,day
+ua750,m s-1,Eastward Wind,eastward_wind,TIER2,requested by CORDEX-Africa,6hrPt
+va750,m s-1,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,mon
+va750,m s-1,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,day
+va750,m s-1,Northward Wind,northward_wind,TIER2,requested by CORDEX-Africa,6hrPt
+ta750,K,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,mon
+ta750,K,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,day
+ta750,K,Air Temperature,air_temperature,TIER2,requested by CORDEX-Africa,6hrPt
+hus750,1,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,mon
+hus750,1,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,day
+hus750,1,Specific Humidity,specific_humidity,TIER2,requested by CORDEX-Africa,6hrPt
+zg750,m,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,mon
+zg750,m,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,day
+zg750,m,Geopotential Height,geopotential_height,TIER2,requested by CORDEX-Africa,6hrPt
+wa750,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,mon
+wa750,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,day
+wa750,m s-1,Upward Air Velocity,upward_air_velocity,TIER2,requested by CORDEX-Africa,6hrPt
+ua200m,m s-1,Eastward Wind at 200m,eastward_wind,TIER2,,mon
+ua200m,m s-1,Eastward Wind at 200m,eastward_wind,TIER2,,day
+ua200m,m s-1,Eastward Wind at 200m,eastward_wind,TIER2,,1hrPt
+ua250m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,mon
+ua250m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,day
+ua250m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,1hrPt
+ua300m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,mon
+ua300m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,day
+ua300m,m s-1,Eastward Wind at 250m,eastward_wind,TIER2,,1hrPt
+va200m,m s-1,Northward Wind at 200m,northward_wind,TIER1,,mon
+va200m,m s-1,Northward Wind at 200m,northward_wind,TIER1,,day
+va200m,m s-1,Northward Wind at 200m,northward_wind,TIER1,,1hrPt
+va250m,m s-1,Northward Wind at 250m,northward_wind,TIER1,,mon
+va250m,m s-1,Northward Wind at 250m,northward_wind,TIER1,,day
+va250m,m s-1,Northward Wind at 250m,northward_wind,TIER1,,1hrPt
+va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,mon
+va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,day
+va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,1hrPt
+sftgif,%,Percentage of the Grid Cell Covered by Glacier,land_ice_area_fraction,TIER2,,fx
+mrsofc,kg m-2,Capacity of Soil to Store Water  (Field Capacity),soil_moisture_content_at_field_capacity,TIER2,,fx
+rootd,m,Maximum Root Depth,root_depth,TIER2,,fx
+sftlaf,%,Percentage of the Grid Cell Occupied by Lake,lake_area_fraction,TIER2,not in CMIP or in CF ,fx
+sfturf,%,Percentage of the Grid Cell Occupied by City,urban_area_fraction,TIER2,not in CMIP or in CF ,fx
+dtb,m,Depth to Bedrock,bedrock_depth,TIER2,not in CMIP or in CF (lower boundary of land surface models),fx
+areacella,m2,Atmosphere Grid-Cell Area,cell_area,TIER2,,fx

@@ -6,6 +6,7 @@ from .data_request import (
     get_cmip6_cmor_table,
     get_variable_entries_by_attributes,
     get_variable_entry,
+    retrieve_cmip6_mip_tables,
     retrieve_data_request,
     table_to_json,
 )
@@ -20,4 +21,5 @@ __all__ = [
     "create_cmor_tables",
     "create_cmor_table",
     "table_to_json",
+    "retrieve_cmip6_mip_tables",
 ]

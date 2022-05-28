@@ -1,5 +1,6 @@
 # from urllib.request import urlopen
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -109,13 +110,34 @@ def clean_df(df, drop=True):
     df = df.loc[:, ~df.columns.str.contains("Unnamed")]
     # lower case column names
     df.columns = df.columns.str.lower()
+    df.rename(columns={"output variable name": "out_name"}, inplace=True)
     # frequency columns to tidy data
     df["frequency"] = df.apply(lambda row: freq_list(row), axis=1)
     df = df.explode("frequency", ignore_index=True)
     df = handle_inconsistencies(df)
+    # set correct frequency name for point values
+    subdaily_pt = (df["frequency"].isin(["1hr", "3hr", "6hr"])) & (
+        df["ag"] == "i"
+    )
+    df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
+    df["cell_methods"] = "area: mean time: mean"
+    df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
+    # remove trailing formatters
+    df.replace(r"\n", " ", regex=True, inplace=True)
+    strip_cols = ["standard_name", "long_name"]
+    for col in strip_cols:
+        df[col] = df[col].str.strip()
     if drop is True:
-        df = df.drop(columns=freqs)
+        df.drop(columns=freqs, inplace=True)
+        df.drop(columns=["ag"], inplace=True)
         df = df.dropna(how="all")
+    return df
+
+
+def update_df(df):
+    subdaily_pt = df["frequency"].isin(["1hrPt", "3hrPt", "6hrPt"])
+    df["cell_methods"] = "area: mean time: mean"
+    df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
     return df
 
 
@@ -152,7 +174,12 @@ def retrieve_data_request(sheet_name=None, skiprows=6, clean=True):
     """
     if sheet_name is None:
         sheet_name = sheet_names
-    data = pd.read_excel(excel_url, sheet_name=sheet_name, skiprows=skiprows)
+    data = pd.read_excel(
+        excel_url,
+        sheet_name=sheet_name,
+        skiprows=skiprows,
+        converters={"units": str},
+    )
     try:
         df = pd.concat(data.values())
     except Exception:
@@ -201,7 +228,7 @@ def get_variable_entries_by_attributes(table, how=None, **kwargs):
     return results
 
 
-def get_all_variable_entries_by_attributes(how="any", **kwargs):
+def get_all_variable_entries_by_attributes(how="any", tables=None, **kwargs):
     """retrieve variable entry from all cmor tables
 
     Returns all variable entries from all CMIP6 cmor table depending
@@ -222,7 +249,9 @@ def get_all_variable_entries_by_attributes(how="any", **kwargs):
 
     """
     results = {}
-    for t in cmip6_table_list():
+    if tables is None:
+        tables = cmip6_table_list()
+    for t in tables:
         entries = get_variable_entries_by_attributes(t, how=how, **kwargs)
         if entries:
             results[t] = entries
@@ -273,11 +302,56 @@ def create_cmor_tables(df, groupby="frequency"):
     }
 
 
-def table_to_json(table):
-    import json
-
+def table_to_json(table, dir=None):
+    if dir is None:
+        dir = "./"
+    if not os.path.isdir(dir):
+        os.makedirs(dir)
     table_id = table["Header"]["table_id"].split()[1]
-    filename = f"CORDEX-CMIP6_{table_id}.json"
+    filename = os.path.join(dir, f"CORDEX-CMIP6_{table_id}.json")
     print(f"writing: {filename}")
     with open(filename, "w") as fp:
         json.dump(table, fp, indent=4)
+
+
+def retrieve_cmip6_mip_tables():
+    """retrieve and concat all cmip6 mip tables from
+    https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx
+    """
+    cols = [
+        "frequency",
+        "modeling_realm",
+        "standard_name",
+        "units",
+        "cell_methods",
+        "cell_measures",
+        "long_name",
+        "comment",
+        "dimensions",
+        "out_name",
+        "type",
+        "positive",
+        "valid_min",
+        "valid_max",
+        "ok_min_mean_abs",
+        "ok_max_mean_abs",
+        "cmip6_table",
+    ]
+    cmip6_mip_tables_url = "https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx"
+    tables = pd.read_excel(cmip6_mip_tables_url, sheet_name=None)
+    del tables["Notes"]
+
+    def add_table_name(df, table):
+        df["cmip6_table"] = table
+        return df
+
+    df = pd.concat(add_table_name(df, table) for table, df in tables.items())
+    df.rename(
+        columns={
+            "CF Standard Name": "standard_name",
+            "Long name": "long_name",
+            "Variable Name": "out_name",
+        },
+        inplace=True,
+    )
+    return df[cols].drop_duplicates(ignore_index=True)
