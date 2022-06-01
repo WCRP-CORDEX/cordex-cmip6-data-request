@@ -4,6 +4,34 @@ CORDEX CMIP6 data request table
 
 The csv table in this repository has been created from the data request [excel sheets](https://cordex.org/wp-content/uploads/2022/03/CORDEX_CMIP6_Atmosphere_Variable_List.xlsx) at the [CORDEX data request website](https://cordex.org/experiment-guidelines/cordex-cmip6/data-request/). The table is supposed to be machine readable and used for creating cmorization tables.
 
+There are currently two main tables:
+
+* `cordex-cmip6-data-request.csv`: cordex data request
+* `cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from [cmip6 data request](https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx) (not complete or correct yet!). This table is supposed to be converted to `json` cmor tables, see e.g., `table-prototyping.ipynb`.
+
+If the CORDEX-CMIP6 cmor tables are supposed to be the same structure as the CMIP6 cmor tables, the following attributes have to be specified for each requested variable:
+
+```python
+attrs = {
+    "frequency": "",
+    "modeling_realm": "atmos",
+    "standard_name": "",
+    "units": "",
+    "cell_methods": "",
+    "cell_measures": "area: areacella",
+    "long_name": "",
+    "comment": "",
+    "dimensions": "",
+    "out_name": "",
+    "type": "real",
+    "positive": "",
+    "valid_min": "",
+    "valid_max": "",
+    "ok_min_mean_abs": "",
+    "ok_max_mean_abs": "",
+}
+```
+
 ## Introduction [^1]
 
 [^1]: from https://docs.google.com/document/d/1qX6tF26jPY1IYRVZQ00FLSU7AY4hZJoC.
@@ -11,7 +39,7 @@ The csv table in this repository has been created from the data request [excel s
 The CORDEX-CMIP6 Data Request (DR) is a simplified analog of the CMIP6 Data Request for global models and defines all the quantities from CMIP6-driven CORDEX simulations that should be archived. The CORDEX-CMIP6 DR includes a number of Variable Lists (VLs) specifying output from different components (e.g. Atmosphere, Ocean, Aerosol, Land, Sea Ice, Rivers, etc.) of Regional Climate Models (RCMs). This document provides details on i) how to select output variables and their output intervals from the CORDEX-CMIP6 Variable Lists and ii) how to archive a number of specific variables.
 
 * Currently, only the CORDEX-CMIP6 Atmosphere VL is included and VLs for other RCM components will be added when available.
-* The CORDEX-CMIP6 VLs provide information about what variables are to be archived, their output frequency, temporal aggregation, units, standard and long names. Detailed metadata for each variable (variable attributes in netcdf files) will be provided in so called Climate Model Output Rewriter (CMOR) tables when available. The format of the CORDEX-CMIP6 CMOR tables is supposed to be the same as for the CMIP6 CMOR tables.
+* The CORDEX-CMIP6 VLs provide information about what variables are to be archived, their output frequency, temporal aggregation, units, standard and long names. Detailed metadata for each variable (variable attributes in netcdf files) will be provided in so called Climate Model Output Rewriter (CMOR) tables when available. The format of the CORDEX-CMIP6 CMOR tables is supposed to be the same as for the [CMIP6 CMOR tables](https://github.com/PCMDI/cmip6-cmor-tables).
 * If you find any errors or typos in the CORDEX-CMIP6 Atmosphere VL, please report them to datasupport@cordex.org.
 
 ### Atmosphere Variable List
