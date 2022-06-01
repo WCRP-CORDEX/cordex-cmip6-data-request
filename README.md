@@ -22,7 +22,7 @@ attrs = {
     "long_name": "",
     "comment": "",
     "dimensions": "",
-    "out_name": "tas",
+    "out_name": "",
     "type": "real",
     "positive": "",
     "valid_min": "",
