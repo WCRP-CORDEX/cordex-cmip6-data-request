@@ -7,7 +7,7 @@ The csv table in this repository has been created from the data request [excel s
 There are currently two main tables:
 
 * `cordex-cmip6-data-request.csv`: cordex data request
-* `cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from cmip6 data request (not complete or correct yet!). This table is supposed to be converted to `json` cmor tables, see e.g., `table-prototyping.ipynb`.
+* `cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from [cmip6 data request](https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx) (not complete or correct yet!). This table is supposed to be converted to `json` cmor tables, see e.g., `table-prototyping.ipynb`.
 
 If the CORDEX-CMIP6 cmor tables are supposed to be the same structure as the CMIP6 cmor tables, the following attributes have to be specified for each requested variable:
 
