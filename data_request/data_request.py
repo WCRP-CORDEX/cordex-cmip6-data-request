@@ -130,7 +130,7 @@ def clean_df(df, drop=True):
     if drop is True:
         df.drop(columns=freqs, inplace=True)
         df.drop(columns=["ag"], inplace=True)
-        df = df.dropna(how="all")
+        df = df.dropna(subset=['out_name', 'frequency'], how="all")
     return df
 
 
@@ -282,7 +282,7 @@ def create_table_header(name):
 def create_cmor_table(name, df):
     return dict(
         Header=create_table_header(name),
-        variable_entry=df.set_index("output variable name").to_dict(
+        variable_entry=df.set_index("out_name").to_dict(
             orient="index"
         ),
     )
