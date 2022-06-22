@@ -11,25 +11,25 @@ There are currently two main tables:
 
 If the CORDEX-CMIP6 cmor tables are supposed to be the same structure as the CMIP6 cmor tables, the following attributes have to be specified for each requested variable:
 
-```python
-attrs = {
-    "frequency": "",
-    "modeling_realm": "atmos",
-    "standard_name": "",
-    "units": "",
-    "cell_methods": "",
-    "cell_measures": "area: areacella",
-    "long_name": "",
-    "comment": "",
-    "dimensions": "",
-    "out_name": "",
-    "type": "real",
-    "positive": "",
-    "valid_min": "",
-    "valid_max": "",
-    "ok_min_mean_abs": "",
-    "ok_max_mean_abs": "",
-}
+```json
+"attrs" : {
+            "frequency": "",
+            "modeling_realm": "atmos",
+            "standard_name": "",
+            "units": "",
+            "cell_methods": "",
+            "cell_measures": "area: areacella",
+            "long_name": "",
+            "comment": "",
+            "dimensions": "",
+            "out_name": "",
+            "type": "real",
+            "positive": "",
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
+          }
 ```
 
 ## Introduction [^1]
