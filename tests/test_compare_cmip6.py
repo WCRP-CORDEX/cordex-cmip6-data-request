@@ -24,6 +24,10 @@ def test_compare_cmip6(df_cordex, df_cmip6):
     merge = pd.merge(
         df_cordex, df_cmip6, on="long_name", suffixes=("_cordex", "_cmip6")
     )
-    # check if untis differ
+    # check if units are consisten with CMIP6 standard
     units_diff = merge[(merge.units_cordex != merge.units_cmip6)]
     assert units_diff.empty
+
+    # check if types are consisten with CMIP6 standard
+    types_diff = merge[merge.type_cordex != merge.type_cmip6]
+    assert types_diff.empty
