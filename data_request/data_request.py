@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import tables
+from . import cmip6_table_names as tables
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
 sheet_name = "Atmos%20CORE"
@@ -130,7 +130,7 @@ def clean_df(df, drop=True):
     if drop is True:
         df.drop(columns=freqs, inplace=True)
         df.drop(columns=["ag"], inplace=True)
-        df = df.dropna(subset=['out_name', 'frequency'], how="all")
+        df = df.dropna(subset=["out_name", "frequency"], how="all")
     return df
 
 
@@ -282,9 +282,7 @@ def create_table_header(name):
 def create_cmor_table(name, df):
     return dict(
         Header=create_table_header(name),
-        variable_entry=df.set_index("out_name").to_dict(
-            orient="index"
-        ),
+        variable_entry=df.set_index("out_name").to_dict(orient="index"),
     )
 
 
