@@ -1,6 +1,6 @@
 import re
 
-import coordinates as coords
+from . import coordinates as coords
 
 
 def get_coordinates(out_name, long_name, frequency=None):
