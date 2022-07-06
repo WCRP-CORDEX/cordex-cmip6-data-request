@@ -6,3 +6,4 @@ dependencies:
   - pandas
   - openpyxl
   - pooch
+  - pytest
