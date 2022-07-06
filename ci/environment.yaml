@@ -1,3 +1,4 @@
+name: cordex-cmip6-data-request-tests
 channels:
   - conda-forge
   - defaults
@@ -6,3 +7,4 @@ dependencies:
   - pandas
   - openpyxl
   - pooch
+  - pytest
