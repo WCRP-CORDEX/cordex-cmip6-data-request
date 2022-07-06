@@ -29,6 +29,27 @@ table_map = {
 }
 
 
+# columns in cmor tables according to CMIP6
+columns = [
+    "frequency",
+    "modeling_realm",
+    "standard_name",
+    "units",
+    "cell_methods",
+    "cell_measures",
+    "long_name",
+    "comment",
+    "dimensions",
+    "out_name",
+    "type",
+    "positive",
+    "valid_min",
+    "valid_max",
+    "ok_min_mean_abs",
+    "ok_max_mean_abs",
+]
+
+
 sheet_names = ["Atmos CORE", "Atmos Tier 1", "Atmos Tier 2"]
 
 excel_url = (
@@ -285,9 +306,11 @@ def create_table_header(name):
 
 
 def create_cmor_table(name, df):
+    df = df.copy()
+    df["index"] = df.out_name
     return dict(
         Header=create_table_header(name),
-        variable_entry=df.set_index("out_name").to_dict(orient="index"),
+        variable_entry=df.set_index("index")[columns].to_dict(orient="index"),
     )
 
 
