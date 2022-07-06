@@ -5,7 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import tables
+from . import attributes as attrs
+from . import cmip6_table_names as tables
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
 sheet_name = "Atmos%20CORE"
@@ -130,7 +131,7 @@ def clean_df(df, drop=True):
     if drop is True:
         df.drop(columns=freqs, inplace=True)
         df.drop(columns=["ag"], inplace=True)
-        df = df.dropna(subset=['out_name', 'frequency'], how="all")
+        df = df.dropna(subset=["out_name", "frequency"], how="all")
     return df
 
 
@@ -282,9 +283,7 @@ def create_table_header(name):
 def create_cmor_table(name, df):
     return dict(
         Header=create_table_header(name),
-        variable_entry=df.set_index("out_name").to_dict(
-            orient="index"
-        ),
+        variable_entry=df.set_index("out_name").to_dict(orient="index"),
     )
 
 
@@ -355,3 +354,34 @@ def retrieve_cmip6_mip_tables():
         inplace=True,
     )
     return df[cols].drop_duplicates(ignore_index=True)
+
+
+def add_coordinates(row):
+    return attrs.get_coordinates(row.out_name, row.long_name, row.frequency)
+
+
+def add_cmip6_attributes(df):
+    df = df.copy()
+    attrs = {
+        "frequency": "",
+        "modeling_realm": "atmos",
+        "standard_name": "",
+        "units": "K",
+        "cell_methods": "",
+        "cell_measures": "area: areacella",
+        "long_name": "",
+        "comment": "",
+        "dimensions": "",
+        "out_name": "tas",
+        "type": "real",
+        "positive": "",
+        "valid_min": "",
+        "valid_max": "",
+        "ok_min_mean_abs": "",
+        "ok_max_mean_abs": "",
+    }
+    for key, value in attrs.items():
+        if key not in df:
+            df[key] = value
+    df["dimensions"] = df.apply(add_coordinates, axis=1)
+    return df
