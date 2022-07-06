@@ -1,4 +1,5 @@
 from .data_request import (
+    add_cmip6_attributes,
     cmip6_table_list,
     create_cmor_table,
     create_cmor_tables,
@@ -22,4 +23,5 @@ __all__ = [
     "create_cmor_table",
     "table_to_json",
     "retrieve_cmip6_mip_tables",
+    "add_cmip6_attributes",
 ]

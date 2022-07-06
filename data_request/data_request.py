@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from . import attributes as attrs
 from . import cmip6_table_names as tables
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
@@ -353,3 +354,34 @@ def retrieve_cmip6_mip_tables():
         inplace=True,
     )
     return df[cols].drop_duplicates(ignore_index=True)
+
+
+def add_coordinates(row):
+    return attrs.get_coordinates(row.out_name, row.long_name, row.frequency)
+
+
+def add_cmip6_attributes(df):
+    df = df.copy()
+    attrs = {
+        "frequency": "",
+        "modeling_realm": "atmos",
+        "standard_name": "",
+        "units": "K",
+        "cell_methods": "",
+        "cell_measures": "area: areacella",
+        "long_name": "",
+        "comment": "",
+        "dimensions": "",
+        "out_name": "tas",
+        "type": "real",
+        "positive": "",
+        "valid_min": "",
+        "valid_max": "",
+        "ok_min_mean_abs": "",
+        "ok_max_mean_abs": "",
+    }
+    for key, value in attrs.items():
+        if key not in df:
+            df[key] = value
+    df["dimensions"] = df.apply(add_coordinates, axis=1)
+    return df
