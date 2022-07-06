@@ -1,4 +1,4 @@
-out_name,units,long_name,standard_name,priority,comments,frequency,cell_methods
+out_name,units,long_name,standard_name,priority,comment,frequency,cell_methods
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,mon,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,day,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,1hrPt,area: mean time: point

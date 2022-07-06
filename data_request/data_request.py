@@ -7,6 +7,7 @@ import pandas as pd
 
 from . import attributes as attrs
 from . import cmip6_table_names as tables
+from .version import __version__
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
 sheet_name = "Atmos%20CORE"
@@ -109,20 +110,23 @@ def clean_df(df, drop=True):
     """tidy up dataframe"""
     # remove unnamed columns
     df = df.loc[:, ~df.columns.str.contains("Unnamed")]
-    # lower case column names
+
+    # lower case column names and renaming to cmip6 formats
     df.columns = df.columns.str.lower()
-    df.rename(columns={"output variable name": "out_name"}, inplace=True)
+    df.rename(
+        columns={"output variable name": "out_name", "comments": "comment"},
+        inplace=True,
+    )
+
     # frequency columns to tidy data
     df["frequency"] = df.apply(lambda row: freq_list(row), axis=1)
     df = df.explode("frequency", ignore_index=True)
-    df = handle_inconsistencies(df)
-    # set correct frequency name for point values
-    subdaily_pt = (df["frequency"].isin(["1hr", "3hr", "6hr"])) & (
-        df["ag"] == "i"
-    )
+    df = handle_inconsistencies(df)  # set correct frequency name for point values
+    subdaily_pt = (df["frequency"].isin(["1hr", "3hr", "6hr"])) & (df["ag"] == "i")
     df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
     df["cell_methods"] = "area: mean time: mean"
     df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
+
     # remove trailing formatters
     df.replace(r"\n", " ", regex=True, inplace=True)
     strip_cols = ["standard_name", "long_name"]
@@ -264,7 +268,7 @@ def create_table_header(name):
 
     today = date.today()
     header = {
-        "data_specs_version": "01.00.33",
+        "data_specs_version": __version__,
         "cmor_version": "3.5",
         "table_id": f"Table {name}",
         "realm": "atmos",
@@ -272,12 +276,12 @@ def create_table_header(name):
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
-        "approx_interval": "30.00000",
-        "generic_levels": "alevel alevhalf",
+        "approx_interval": "",
+        "generic_levels": "",
         "mip_era": "CMIP6",
         "Conventions": "CF-1.7 CMIP-6.2",
     }
-    return header
+    return header.copy()
 
 
 def create_cmor_table(name, df):
@@ -287,8 +291,14 @@ def create_cmor_table(name, df):
     )
 
 
-def create_cmor_tables(df, groupby="frequency"):
+def create_cmor_tables(df, groupby=None):
     """Create cmor tables depending on grouped attribute"""
+
+    df = df.copy()
+
+    if groupby is None:
+        df["group"] = df.frequency.str.slice(start=0, stop=3)
+        groupby = "group"
 
     def name(g):
         if isinstance(g, tuple):
@@ -296,9 +306,7 @@ def create_cmor_tables(df, groupby="frequency"):
         return g
 
     gb = df.groupby(groupby)
-    return {
-        name(g): create_cmor_table(name(g), gb.get_group(g)) for g in gb.groups
-    }
+    return {name(g): create_cmor_table(name(g), gb.get_group(g)) for g in gb.groups}
 
 
 def table_to_json(table, dir=None):
