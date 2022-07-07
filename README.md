@@ -2,14 +2,14 @@
 
 [![github CI](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml)
 
-CORDEX CMIP6 data request table
+This repository contains a CORDEX-CMIP6 data request table that is used to create [CORDEX-CMIP6 cmor tables](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables). This repository also contains code to make the data request consistent with CMIP6 vocabulary and conventions and code for creating the actual cmor tables for CORDEX-CMIP6.
 
 The csv table in this repository has been created from the data request [excel sheets](https://cordex.org/wp-content/uploads/2022/03/CORDEX_CMIP6_Atmosphere_Variable_List.xlsx) at the [CORDEX data request website](https://cordex.org/experiment-guidelines/cordex-cmip6/data-request/). The table is supposed to be machine readable and used for creating [CORDEX-CMIP6 cmor tables](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables).
 
 There are currently two main tables:
 
-* `cordex-cmip6-data-request.csv`: cordex data request
-* `cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from [cmip6 data request](https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx) (not complete or correct yet!). This table is supposed to be converted to `json` cmor tables, see e.g., `table-prototyping.ipynb`.
+* `./tables/cordex-cmip6-data-request.csv`: cordex data request
+* `./tables/cordex-cmip6-data-request-extended.csv`: cordex data request enhanced with attributes from [cmip6 data request](https://c6dreq.dkrz.de/docs/CMIP6_MIP_tables.xlsx) (not complete or correct yet!). This table is supposed to be converted to `json` cmor tables, see e.g., `table-prototyping.ipynb`.
 
 If the CORDEX-CMIP6 cmor tables are supposed to be the same structure as the CMIP6 cmor tables, the following attributes have to be specified for each requested variable:
 
