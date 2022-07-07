@@ -1,7 +1,7 @@
 # CORDEX-CMIP6 data request
 
 [![github CI](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml)
-[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/WCRP-CORDEX/cordex-cmip6-data-request/binder?urlpath=lab%2Ftree%2Ftable-prototyping.ipynb)
+[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/WCRP-CORDEX/cordex-cmip6-data-request/main?urlpath=lab%2Ftree%2Ftable-prototyping.ipynb)
 
 This repository contains a CORDEX-CMIP6 data request table that is used to create [CORDEX-CMIP6 cmor tables](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables). This repository also contains code to make the data request consistent with CMIP6 vocabulary and conventions and code for creating the actual cmor tables for CORDEX-CMIP6.
 
