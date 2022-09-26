@@ -1,9 +1,15 @@
 import re
 
-from . import coordinates as coords
+from . import const
 
 
 def get_coordinates(out_name, long_name, frequency=None):
+    """create the coordinates data request column entry
+    
+    Requires out_name and long_name which might determine the vertical
+    coordinate. The frequency might determine the time coordinate.
+    
+    """
     time = get_time_axis(frequency)
     vertical = derive_vertical_coord(out_name, long_name)
     coords = "longitude latitude"
@@ -16,13 +22,16 @@ def get_coordinates(out_name, long_name, frequency=None):
     return coords
 
 
-def derive_vertical_coord(out_name, long_name):
+def derive_vertical_coord(out_name, long_name=None):
     """derive level type and value from outname
 
     Be aware that something like od550aer should not
     result in a pressure nor height level.
 
     """
+    if long_name is None:
+        long_name = ""
+    
     value = get_value_from_out_name(out_name)
 
     if value is None or int(value) == 0:
@@ -39,14 +48,15 @@ def derive_vertical_coord(out_name, long_name):
         trail = out_name.split(value)[1]
 
     if trail == "m":
-        key = coords.height_key_template.format(value=value)
+        key = const.height_key_template.format(value=value)
         return {"type": "height", "key": key, "value": value}
     elif trail == "":
-        key = coords.pressure_key_template.format(value=value)
+        key = const.pressure_key_template.format(value=value)
         return {"type": "p", "key": key, "value": value}
 
 
 def get_time_axis(frequency):
+    """Returns time axis name based on frequency"""
     if frequency == "fx" or frequency is None:
         return None
     elif "Pt" in frequency:
@@ -55,6 +65,7 @@ def get_time_axis(frequency):
 
 
 def get_value_from_out_name(out_name):
+    """Derive a height or pressure level value from out_name"""
     try:
         return re.search(r"\d+", out_name).group()
     except Exception:
