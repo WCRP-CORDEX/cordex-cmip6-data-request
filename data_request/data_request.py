@@ -53,7 +53,7 @@ columns = [
 sheet_names = ["Atmos CORE", "Atmos Tier 1", "Atmos Tier 2"]
 
 excel_url = (
-    "https://cordex.org/wp-content/uploads/2022/03/"
+    "https://cordex.org/wp-content/uploads/2022/09/"
     + "CORDEX_CMIP6_Atmosphere_Variable_List.xlsx"
 )
 
