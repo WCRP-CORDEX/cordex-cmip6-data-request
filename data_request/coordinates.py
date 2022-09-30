@@ -1,4 +1,5 @@
 import re
+
 from .const import height, pressure
 
 
@@ -20,20 +21,18 @@ def create_coord(type, value):
         return coord
 
 
-
 def get_value_from_str(out_name):
     try:
         return re.search(r"\d+", out_name).group()
     except Exception:
         return None
-    
-    
+
+
 def get_coordinates(df):
     coords = []
     for t in ["height", "p"]:
         vdims = get_vertical_dimension(df, t)
         for dim in vdims:
             value = get_value_from_str(dim)
-            print(value)
             coords.append(create_coord(t, value))
     return coords

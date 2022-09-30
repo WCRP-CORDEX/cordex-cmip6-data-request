@@ -5,10 +5,10 @@ from . import const
 
 def get_coordinates(out_name, long_name, frequency=None):
     """create the coordinates data request column entry
-    
+
     Requires out_name and long_name which might determine the vertical
     coordinate. The frequency might determine the time coordinate.
-    
+
     """
     time = get_time_axis(frequency)
     vertical = derive_vertical_coord(out_name, long_name)
@@ -31,7 +31,7 @@ def derive_vertical_coord(out_name, long_name=None):
     """
     if long_name is None:
         long_name = ""
-    
+
     value = get_value_from_out_name(out_name)
 
     if value is None or int(value) == 0:
