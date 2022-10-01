@@ -1,55 +1,13 @@
-height_key_template = "height{value}m"
-pressure_key_template = "p{value}"
+import re
+
+from .const import height, pressure
 
 
-height = {
-    "standard_name": "height",
-    "units": "m",
-    "axis": "Z",
-    "long_name": "height",
-    "climatology": "",
-    "formula": "",
-    "must_have_bounds": "no",
-    "out_name": "height",
-    "positive": "up",
-    "requested": "",
-    "requested_bounds": "",
-    "stored_direction": "increasing",
-    "tolerance": "",
-    "type": "double",
-    "valid_max": "",
-    "valid_min": "",
-    "value": "",
-    "z_bounds_factors": "",
-    "z_factors": "",
-    "bounds_values": "",
-    "generic_level_name": "",
-}
-
-
-pressure = {
-    "standard_name": "air_pressure",
-    "units": "Pa",
-    "axis": "Z",
-    "long_name": "pressure",
-    "climatology": "",
-    "formula": "",
-    "must_have_bounds": "no",
-    "out_name": "plev",
-    "positive": "down",
-    "requested": "",
-    "requested_bounds": "",
-    "stored_direction": "",
-    "tolerance": "",
-    "type": "double",
-    "valid_max": "",
-    "valid_min": "",
-    "value": "",
-    "z_bounds_factors": "",
-    "z_factors": "",
-    "bounds_values": "",
-    "generic_level_name": "",
-}
+def get_vertical_dimension(df, name="height"):
+    """Returns a list of vertical coordinates required for the data request"""
+    dims = df[df["dimensions"].str.contains(name)].dimensions.unique()
+    vdims = [d.split(" ")[-1] for d in dims]
+    return list(dict.fromkeys(vdims))
 
 
 def create_coord(type, value):
@@ -59,5 +17,22 @@ def create_coord(type, value):
         return coord
     elif type == "p":
         coord = pressure.copy()
-        coord["value"] = 100 * value
+        coord["value"] = str(100 * int(value))
         return coord
+
+
+def get_value_from_str(out_name):
+    try:
+        return re.search(r"\d+", out_name).group()
+    except Exception:
+        return None
+
+
+def get_coordinates(df):
+    coords = []
+    for t in ["height", "p"]:
+        vdims = get_vertical_dimension(df, t)
+        for dim in vdims:
+            value = get_value_from_str(dim)
+            coords.append(create_coord(t, value))
+    return coords
