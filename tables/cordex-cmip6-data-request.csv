@@ -2,9 +2,9 @@ out_name,units,long_name,standard_name,priority,comment,frequency,cell_methods
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,mon,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,day,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,1hrPt,area: mean time: point
-tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon,area: mean time: maximum
+tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon,area: mean time: maximum within days time: mean over days
 tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,day,area: mean time: maximum
-tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon,area: mean time: minimum
+tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon,area: mean time: minimum within days time: mean over days
 tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,day,area: mean time: minimum
 pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,mon,area: mean time: mean
 pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,day,area: mean time: mean
@@ -53,8 +53,8 @@ tsl,K,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,mon,area: mean time: mean
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,day,area: mean time: mean
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,1hr,area: mean time: mean
-prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon,area: mean time: maximum
-prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day,area: mean time: maximum
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon,area: mean time: mean within hours time: maximum over hours
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day,area: mean time: mean within hours time: maximum over hours
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,mon,area: mean time: mean
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,day,area: mean time: mean
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,1hr,area: mean time: mean
@@ -73,7 +73,7 @@ tauu,Pa,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,T
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,mon,area: mean time: mean
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,day,area: mean time: mean
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,1hr,area: mean time: mean
-sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon,area: mean time: maximum
+sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon,area: mean time: maximum within days time: mean over days
 sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day,area: mean time: maximum
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",mon,area: mean time: mean
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",day,area: mean time: mean
