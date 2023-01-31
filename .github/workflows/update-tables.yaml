@@ -52,6 +52,9 @@ jobs:
           conda info -a
           conda list
 
+      - name: Install data_request
+        run: pip install .
+
       - name: Create tables
         run: python scripts/create-tables.py
 
