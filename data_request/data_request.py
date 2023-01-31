@@ -157,6 +157,11 @@ def clean_df(df, drop=True):
         df.drop(columns=freqs, inplace=True)
         df.drop(columns=["ag"], inplace=True)
         df = df.dropna(subset=["out_name", "frequency"], how="all")
+
+    # handle min max cell_methods
+    df.loc[df.out_name.str.contains("min"), "cell_methods"] = "area: mean time: minimum"
+    df.loc[df.out_name.str.contains("max"), "cell_methods"] = "area: mean time: maximum"
+
     return df
 
 
