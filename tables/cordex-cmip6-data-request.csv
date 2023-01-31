@@ -2,10 +2,10 @@ out_name,units,long_name,standard_name,priority,comment,frequency,cell_methods
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,mon,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,day,area: mean time: mean
 tas,K,Near-Surface Air Temperature,air_temperature,CORE,,1hrPt,area: mean time: point
-tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon,area: mean time: mean
-tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,day,area: mean time: mean
-tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon,area: mean time: mean
-tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,day,area: mean time: mean
+tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,mon,area: mean time: maximum
+tasmax,K,Daily Maximum Near-Surface Air Temperature,air_temperature,CORE,maximum from all integrated time steps per day,day,area: mean time: maximum
+tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,mon,area: mean time: minimum
+tasmin,K,Daily Minimum Near-Surface Air Temperature,air_temperature,CORE,minimum from all integrated time steps per day,day,area: mean time: minimum
 pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,mon,area: mean time: mean
 pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,day,area: mean time: mean
 pr,kg m-2 s-1,Precipitation,precipitation_flux,CORE,,1hr,area: mean time: mean
@@ -53,8 +53,8 @@ tsl,K,Temperature of Soil,soil_temperature,TIER1, Temperature of each soil layer
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,mon,area: mean time: mean
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,day,area: mean time: mean
 prc,kg m-2 s-1,Convective Precipitation,convective_precipitation_flux,TIER1,,1hr,area: mean time: mean
-prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon,area: mean time: mean
-prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day,area: mean time: mean
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,mon,area: mean time: maximum
+prhmax,kg m-2 s-1,Daily Maximum Hourly Precipitation Rate,precipitation_flux,TIER1,Defined as maximum of the precipitation rate averaged over the whole hour. ,day,area: mean time: maximum
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,mon,area: mean time: mean
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,day,area: mean time: mean
 prsn,kg m-2 s-1,Snowfall Flux,snowfall_flux,TIER1,,1hr,area: mean time: mean
@@ -73,8 +73,8 @@ tauu,Pa,Surface Downward Eastward Wind Stress,surface_downward_eastward_stress,T
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,mon,area: mean time: mean
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,day,area: mean time: mean
 tauv,Pa,Surface Downward Northward Wind Stress,surface_downward_northward_stress,TIER1,,1hr,area: mean time: mean
-sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon,area: mean time: mean
-sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day,area: mean time: mean
+sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,mon,area: mean time: maximum
+sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day,area: mean time: maximum
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",mon,area: mean time: mean
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",day,area: mean time: mean
 rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,mon,area: mean time: mean
@@ -349,8 +349,8 @@ hus50m,1,Specific Humidity at 50m,specific_humidity,TIER1, requested for urban m
 evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,mon,area: mean time: mean
 evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,day,area: mean time: mean
 evspsblpot,kg m-2 s-1,Potential Evapotranspiration,water_potential_evaporation_flux,TIER2,,1hr,area: mean time: mean
-wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,mon,area: mean time: mean
-wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,day,area: mean time: mean
+wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,mon,area: mean time: maximum
+wsgsmax,m s-1,Daily Maximum Near-Surface Wind Speed of Gust,wind_speed_of_gust,TIER2,,day,area: mean time: maximum
 clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,mon,area: mean time: mean
 clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,day,area: mean time: mean
 clh,%,High Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,above 440 hPa,6hr,area: mean time: mean
@@ -389,12 +389,12 @@ LI,K,Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adia
 CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon,area: mean time: mean
 CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day,area: mean time: mean
 CIN,J kg-1,Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,1hrPt,area: mean time: point
-CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon,area: mean time: mean
-CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day,area: mean time: mean
-LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon,area: mean time: mean
-LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day,area: mean time: mean
-CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon,area: mean time: mean
-CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day,area: mean time: mean
+CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon,area: mean time: maximum
+CAPEmax,J kg-1,Daily Maximum Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,day,area: mean time: maximum
+LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,mon,area: mean time: maximum
+LImax,K,Daily Maximum Lifted Index,temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface,TIER2,,day,area: mean time: maximum
+CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,mon,area: mean time: maximum
+CINmax,J kg-1,Daily Maximum Convective Inhibition,atmosphere_convective_inhibition_wrt_surface,TIER2,,day,area: mean time: maximum
 od550aer ,1,Ambient Aerosol Optical Thickness at 550nm,atmosphere_optical_thickness_due_to_ambient_aerosol_particles,TIER2,"long_name fixed, 2022.09.22  https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/issues/6",mon,area: mean time: mean
 ua150,m s-1,Eastward Wind,eastward_wind,TIER2,,mon,area: mean time: mean
 ua150,m s-1,Eastward Wind,eastward_wind,TIER2,,day,area: mean time: mean
