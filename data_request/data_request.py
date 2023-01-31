@@ -7,6 +7,7 @@ import pandas as pd
 
 from . import attributes as attrs
 from . import cmip6_table_names as tables
+from .cell_methods import cell_methods
 from .version import __version__
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
@@ -127,6 +128,13 @@ def handle_inconsistencies(df):
     return df
 
 
+def handle_cell_methods(df):
+    for var, v in cell_methods.items():
+        for f, cm in v.items():
+            df.loc[(df.out_name == var) & (df.frequency == f), "cell_methods"] = cm
+    return df
+
+
 def clean_df(df, drop=True):
     """tidy up dataframe"""
     # remove unnamed columns
@@ -161,6 +169,9 @@ def clean_df(df, drop=True):
     # handle min max cell_methods
     df.loc[df.out_name.str.contains("min"), "cell_methods"] = "area: mean time: minimum"
     df.loc[df.out_name.str.contains("max"), "cell_methods"] = "area: mean time: maximum"
+
+    # handle special cases
+    df = handle_cell_methods(df)
 
     return df
 
