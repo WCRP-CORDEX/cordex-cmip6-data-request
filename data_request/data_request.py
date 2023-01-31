@@ -300,7 +300,7 @@ def get_all_variable_entries_by_attributes(how="any", tables=None, **kwargs):
     return results
 
 
-def create_table_header(name):
+def create_table_header(name, interval):
     from datetime import date
 
     today = date.today()
@@ -313,7 +313,7 @@ def create_table_header(name):
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
-        "approx_interval": "",
+        "approx_interval": "{interval}",
         "generic_levels": "",
         "mip_era": "CMIP6",
         "Conventions": "CF-1.7 CMIP-6.2",
@@ -321,11 +321,11 @@ def create_table_header(name):
     return header.copy()
 
 
-def create_cmor_table(name, df):
+def create_cmor_table(name, df, interval):
     df = df.copy()
     df["index"] = df.out_name
     return dict(
-        Header=create_table_header(name),
+        Header=create_table_header(name, interval),
         variable_entry=df.set_index("index")[columns].to_dict(orient="index"),
     )
 
