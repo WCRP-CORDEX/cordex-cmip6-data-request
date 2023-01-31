@@ -42,8 +42,8 @@ rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave
 rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,mon,area: mean time: mean
 rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,day,area: mean time: mean
 rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,1hr,area: mean time: mean
-orog,m,Surface Altitude,surface_altitude,CORE,,fx,area: mean time: mean
-sftlf,%,Percentage of the Grid Cell Occupied by Land,land_area_fraction,CORE,,fx,area: mean time: mean
+orog,m,Surface Altitude,surface_altitude,CORE,,fx,area: mean
+sftlf,%,Percentage of the Grid Cell Occupied by Land,land_area_fraction,CORE,,fx,area: mean
 ts,K,Surface Temperature,surface_temperature,TIER1,,mon,area: mean time: mean
 ts,K,Surface Temperature,surface_temperature,TIER1,,day,area: mean time: mean
 ts,K,Surface Temperature,surface_temperature,TIER1,,1hrPt,area: mean time: point
@@ -558,10 +558,10 @@ va250m,m s-1,Northward Wind at 250m,northward_wind,TIER1,,1hrPt,area: mean time:
 va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,mon,area: mean time: mean
 va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,day,area: mean time: mean
 va300m,m s-1,Northward Wind at 350m,northward_wind,TIER1,,1hrPt,area: mean time: point
-sftgif,%,Percentage of the Grid Cell Covered by Glacier,land_ice_area_fraction,TIER2,,fx,area: mean time: mean
-mrsofc,kg m-2,Capacity of Soil to Store Water  (Field Capacity),soil_moisture_content_at_field_capacity,TIER2,,fx,area: mean time: mean
-rootd,m,Maximum Root Depth,root_depth,TIER2,,fx,area: mean time: mean
-sftlaf,%,Percentage of the Grid Cell Occupied by Lake,lake_area_fraction,TIER2,not in CMIP or in CF ,fx,area: mean time: mean
-sfturf,%,Percentage of the Grid Cell Occupied by City,urban_area_fraction,TIER2,not in CMIP or in CF ,fx,area: mean time: mean
-dtb,m,Depth to Bedrock,bedrock_depth,TIER2,not in CMIP or in CF (lower boundary of land surface models),fx,area: mean time: mean
-areacella,m2,Atmosphere Grid-Cell Area,cell_area,TIER2,,fx,area: mean time: mean
+sftgif,%,Percentage of the Grid Cell Covered by Glacier,land_ice_area_fraction,TIER2,,fx,area: mean
+mrsofc,kg m-2,Capacity of Soil to Store Water  (Field Capacity),soil_moisture_content_at_field_capacity,TIER2,,fx,area: mean
+rootd,m,Maximum Root Depth,root_depth,TIER2,,fx,area: mean
+sftlaf,%,Percentage of the Grid Cell Occupied by Lake,lake_area_fraction,TIER2,not in CMIP or in CF ,fx,area: mean
+sfturf,%,Percentage of the Grid Cell Occupied by City,urban_area_fraction,TIER2,not in CMIP or in CF ,fx,area: mean
+dtb,m,Depth to Bedrock,bedrock_depth,TIER2,not in CMIP or in CF (lower boundary of land surface models),fx,area: mean
+areacella,m2,Atmosphere Grid-Cell Area,cell_area,TIER2,,fx,area: sum

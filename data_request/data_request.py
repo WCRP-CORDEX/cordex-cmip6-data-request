@@ -155,7 +155,7 @@ def clean_df(df, drop=True):
     df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
     df["cell_methods"] = "area: mean time: mean"
     df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
-
+    df.loc[df.frequency == "fx", "cell_methods"] = "area: mean"
     # remove trailing formatters
     df.replace(r"\n", " ", regex=True, inplace=True)
     strip_cols = ["standard_name", "long_name"]

@@ -11,6 +11,7 @@ duration (sund). Monthly output for all variables is an average of daily values.
 
 cell_methods = {}
 
+cell_methods["areacella"] = {"fx": "area: sum"}
 """
 CMIP6_6hrPlev.json-        "prhmax": {
 CMIP6_6hrPlev.json-            "frequency": "6hr",
@@ -21,7 +22,7 @@ CMIP6_6hrPlev.json:            "cell_methods": "area: mean time: mean within hou
 
 --
 CMIP6_Eday.json-        "prhmax": {
-CMIP6_Eday.json-            "frequency": "day",
+CMIP6_Eday.json-            "fr®equency": "day",
 CMIP6_Eday.json-            "modeling_realm": "atmos",
 CMIP6_Eday.json-            "standard_name": "precipitation_flux",
 CMIP6_Eday.json-            "units": "kg m-2 s-1",
