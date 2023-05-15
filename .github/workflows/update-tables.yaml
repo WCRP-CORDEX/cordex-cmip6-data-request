@@ -27,7 +27,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: checkout cordex-cv
+    - name: checkout data_request
       uses: actions/checkout@v3
 
     - name: checkout cordex-cmip6-cmor-tables
@@ -52,7 +52,7 @@ jobs:
       run: |
         python -m pip install --no-deps -e .
 
-    - name: Update cmor tables vocabulary
+    - name: Update cmor tables and coordinates table
       run: |
         python scripts/create-tables.py
         python scripts/create-coordinates.py
