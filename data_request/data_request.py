@@ -8,6 +8,7 @@ import pandas as pd
 from . import attributes as attrs
 from . import cmip6_table_names as tables
 from .cell_methods import cell_methods
+from .const import table_prefix
 from .version import __version__
 
 sheet_id = "1qUauozwXkq7r1g-L4ALMIkCNINIhhCPx"
@@ -354,7 +355,7 @@ def table_to_json(table, dir=None):
     if not os.path.isdir(dir):
         os.makedirs(dir)
     table_id = table["Header"]["table_id"].split()[1]
-    filename = os.path.join(dir, f"CORDEX-CMIP6_{table_id}.json")
+    filename = os.path.join(dir, f"{table_prefix}_{table_id}.json")
     print(f"writing: {filename}")
     with open(filename, "w") as fp:
         json.dump(table, fp, indent=4)

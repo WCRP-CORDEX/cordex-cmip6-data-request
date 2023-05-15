@@ -1,6 +1,8 @@
 height_key_template = "height{value}m"
 pressure_key_template = "p{value}"
 
+table_prefix = "CORDEX"
+
 
 height = {
     "standard_name": "height",
@@ -49,4 +51,112 @@ pressure = {
     "z_factors": "",
     "bounds_values": "",
     "generic_level_name": "",
+}
+
+
+longitude = {
+    "standard_name": "longitude",
+    "units": "degrees_east",
+    "axis": "X",
+    "long_name": "Longitude",
+    "climatology": "",
+    "formula": "",
+    "must_have_bounds": "yes",
+    "out_name": "lon",
+    "positive": "",
+    "requested": "",
+    "requested_bounds": "",
+    "stored_direction": "increasing",
+    "tolerance": "",
+    "type": "double",
+    "valid_max": "360.0",
+    "valid_min": "0.0",
+    "value": "",
+    "z_bounds_factors": "",
+    "z_factors": "",
+    "bounds_values": "",
+    "generic_level_name": "",
+}
+
+latitude = {
+    "standard_name": "latitude",
+    "units": "degrees_north",
+    "axis": "Y",
+    "long_name": "Latitude",
+    "climatology": "",
+    "formula": "",
+    "must_have_bounds": "yes",
+    "out_name": "lat",
+    "positive": "",
+    "requested": "",
+    "requested_bounds": "",
+    "stored_direction": "increasing",
+    "tolerance": "",
+    "type": "double",
+    "valid_max": "90.0",
+    "valid_min": "-90.0",
+    "value": "",
+    "z_bounds_factors": "",
+    "z_factors": "",
+    "bounds_values": "",
+    "generic_level_name": "",
+}
+
+
+time = {
+    "standard_name": "time",
+    "units": "days since ?",
+    "axis": "T",
+    "long_name": "time",
+    "climatology": "",
+    "formula": "",
+    "must_have_bounds": "yes",
+    "out_name": "time",
+    "positive": "",
+    "requested": "",
+    "requested_bounds": "",
+    "stored_direction": "increasing",
+    "tolerance": "",
+    "type": "double",
+    "valid_max": "",
+    "valid_min": "",
+    "value": "",
+    "z_bounds_factors": "",
+    "z_factors": "",
+    "bounds_values": "",
+    "generic_level_name": "",
+}
+
+time1 = {
+    "standard_name": "time",
+    "units": "days since ?",
+    "axis": "T",
+    "long_name": "time",
+    "climatology": "",
+    "formula": "",
+    "must_have_bounds": "no",
+    "out_name": "time",
+    "positive": "",
+    "requested": "",
+    "requested_bounds": "",
+    "stored_direction": "increasing",
+    "tolerance": "",
+    "type": "double",
+    "valid_max": "",
+    "valid_min": "",
+    "value": "",
+    "z_bounds_factors": "",
+    "z_factors": "",
+    "bounds_values": "",
+    "generic_level_name": "",
+}
+
+
+dim_table = {
+    "longitude": longitude,
+    "latitude": latitude,
+    "heightm": height,
+    "p": pressure,
+    "time": time,
+    "time1": time1,
 }

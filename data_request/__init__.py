@@ -1,3 +1,5 @@
+from .const import table_prefix
+from .coordinates import get_coordinate_table
 from .data_request import (
     add_cmip6_attributes,
     cmip6_table_list,
@@ -24,4 +26,6 @@ __all__ = [
     "table_to_json",
     "retrieve_cmip6_mip_tables",
     "add_cmip6_attributes",
+    "get_coordinate_table",
+    "table_prefix",
 ]
