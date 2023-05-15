@@ -55,6 +55,7 @@ jobs:
     - name: Update cmor tables vocabulary
       run: |
         python scripts/create-tables.py
+        python scripts/create-coordinates.py
         mv *.json cmor-tables/Tables
 
     - name: Check if there are any changes
