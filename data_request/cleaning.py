@@ -105,7 +105,7 @@ def handle_inconsistencies(df):
     return df
 
 
-def handle_cell_methods(df):
+def handle_special_cell_methods(df):
     for var, v in cell_methods.items():
         for f, cm in v.items():
             df.loc[(df.out_name == var) & (df.frequency == f), "cell_methods"] = cm
@@ -127,12 +127,20 @@ def clean_df(df, drop=True):
     # frequency columns to tidy data
     df["frequency"] = df.apply(lambda row: freq_list(row), axis=1)
     df = df.explode("frequency", ignore_index=True)
+
     df = handle_inconsistencies(df)  # set correct frequency name for point values
+
+    # set frequency
     subdaily_pt = (df["frequency"].isin(["1hr", "3hr", "6hr"])) & (df["ag"] == "i")
     df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
+
+    # set cell methods depending on frequency
     df["cell_methods"] = "area: mean time: mean"
     df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
-    df.loc[df.frequency == "fx", "cell_methods"] = "area: mean"
+
+    # update some more cell_methods
+    df = update_cell_methods(df)
+
     # remove trailing formatters
     df.replace(r"\n", " ", regex=True, inplace=True)
     strip_cols = ["standard_name", "long_name"]
@@ -148,16 +156,26 @@ def clean_df(df, drop=True):
     df.loc[df.out_name.str.contains("max"), "cell_methods"] = "area: mean time: maximum"
 
     # handle special cases
-    df = handle_cell_methods(df)
+    df = handle_special_cell_methods(df)
 
     return df
 
 
-def update_df(df):
-    subdaily_pt = df["frequency"].isin(["1hrPt", "3hrPt", "6hrPt"])
-    df["cell_methods"] = "area: mean time: mean"
-    df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
+def update_cell_methods(df):
+    # special fx cases
+    df.loc[df.frequency == "fx", "cell_methods"] = "area: mean"
+
+    # flux units, see https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/issues/23
+    df.loc[df.units == "W m-2", "cell_methods"] = "area: time: mean"
+
     return df
+
+
+# def update_df(df):
+#    subdaily_pt = df["frequency"].isin(["1hrPt", "3hrPt", "6hrPt"])
+#    df["cell_methods"] = "area: mean time: mean"
+#    df.loc[subdaily_pt, "cell_methods"] = "area: mean time: point"
+#    return df
 
 
 def get_jsonparsed_data(url):

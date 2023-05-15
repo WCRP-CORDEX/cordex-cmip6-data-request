@@ -4,9 +4,9 @@ import sys
 import pandas as pd
 from pytest import fixture
 
-sys.path.append(os.path.dirname(__file__) + "/..")
+from data_request.cleaning import retrieve_cmip6_mip_tables
 
-import data_request as dr  # noqa: E402
+sys.path.append(os.path.dirname(__file__) + "/..")
 
 
 @fixture
@@ -16,7 +16,7 @@ def df_cordex():
 
 @fixture
 def df_cmip6():
-    return dr.retrieve_cmip6_mip_tables()
+    return retrieve_cmip6_mip_tables()
 
 
 def test_compare_cmip6(df_cordex, df_cmip6):
