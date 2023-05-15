@@ -36,12 +36,12 @@ vas,m s-1,Northward Near-Surface Wind,northward_wind,CORE,,1hrPt,area: mean time
 clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,mon,area: mean time: mean
 clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,day,area: mean time: mean
 clt,%,Total Cloud Cover Percentage,cloud_area_fraction,CORE,,1hr,area: mean time: mean
-rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,mon,area: mean time: mean
-rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,day,area: mean time: mean
-rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,1hr,area: mean time: mean
-rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,mon,area: mean time: mean
-rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,day,area: mean time: mean
-rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,1hr,area: mean time: mean
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,mon,area: time: mean
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,day,area: time: mean
+rsds,W m-2,Surface Downwelling Shortwave Radiation,surface_downwelling_shortwave_flux_in_air,CORE,,1hr,area: time: mean
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,mon,area: time: mean
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,day,area: time: mean
+rlds,W m-2,Surface Downwelling Longwave Radiation,surface_downwelling_longwave_flux_in_air,CORE,,1hr,area: time: mean
 orog,m,Surface Altitude,surface_altitude,CORE,,fx,area: mean
 sftlf,%,Percentage of the Grid Cell Occupied by Land,land_area_fraction,CORE,,fx,area: mean
 ts,K,Surface Temperature,surface_temperature,TIER1,,mon,area: mean time: mean
@@ -77,30 +77,30 @@ sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum 
 sfcWindmax,m s-1,Daily Maximum Near-Surface Wind Speed,wind_speed,TIER1,Maximum from all integrated time steps per day,day,area: mean time: maximum
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",mon,area: mean time: mean
 sund,s,Daily Duration of Sunshine,duration_of_sunshine,TIER1,"The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. ""Duration"" is the length of time for which a condition holds.",day,area: mean time: mean
-rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,mon,area: mean time: mean
-rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,day,area: mean time: mean
-rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,1hr,area: mean time: mean
-rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,mon,area: mean time: mean
-rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,day,area: mean time: mean
-rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,1hr,area: mean time: mean
-rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,mon,area: mean time: mean
-rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,day,area: mean time: mean
-rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,1hr,area: mean time: mean
-rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,mon,area: mean time: mean
-rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,day,area: mean time: mean
-rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,1hr,area: mean time: mean
-rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,mon,area: mean time: mean
-rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,day,area: mean time: mean
-rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,1hr,area: mean time: mean
-rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,mon,area: mean time: mean
-rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,day,area: mean time: mean
-rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,1hr,area: mean time: mean
-hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,mon,area: mean time: mean
-hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,day,area: mean time: mean
-hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,1hr,area: mean time: mean
-hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,mon,area: mean time: mean
-hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,day,area: mean time: mean
-hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,1hr,area: mean time: mean
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,mon,area: time: mean
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,day,area: time: mean
+rsdsdir,W m-2,Surface Direct Downwelling Shortwave Radiation,surface_direct_downwelling_shortwave_flux_in_air,TIER1,,1hr,area: time: mean
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,mon,area: time: mean
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,day,area: time: mean
+rsus,W m-2,Surface Upwelling Shortwave Radiation,surface_upwelling_shortwave_flux_in_air,TIER1,,1hr,area: time: mean
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,mon,area: time: mean
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,day,area: time: mean
+rlus,W m-2,Surface Upwelling Longwave Radiation,surface_upwelling_longwave_flux_in_air,TIER1,,1hr,area: time: mean
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,mon,area: time: mean
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,day,area: time: mean
+rlut,W m-2,TOA Outgoing Longwave Radiation,toa_outgoing_longwave_flux,TIER1,,1hr,area: time: mean
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,mon,area: time: mean
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,day,area: time: mean
+rsdt,W m-2,TOA Incident Shortwave Radiation,toa_incoming_shortwave_flux,TIER1,,1hr,area: time: mean
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,mon,area: time: mean
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,day,area: time: mean
+rsut,W m-2,TOA Outgoing Shortwave Radiation,toa_outgoing_shortwave_flux,TIER1,,1hr,area: time: mean
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,mon,area: time: mean
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,day,area: time: mean
+hfls,W m-2,Surface Upward Latent Heat Flux,surface_upward_latent_heat_flux,TIER1,,1hr,area: time: mean
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,mon,area: time: mean
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,day,area: time: mean
+hfss,W m-2,Surface Upward Sensible Heat Flux,surface_upward_sensible_heat_flux,TIER1,,1hr,area: time: mean
 mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",mon,area: mean time: mean
 mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",day,area: mean time: mean
 mrfso,kg m-2,Soil Frozen Water Content,soil_frozen_water_content,TIER1,"The mass of frozen water per unit area, summed over all soil layers. Reported as missing for grid cells with no land.",6hrPt,area: mean time: point
@@ -360,24 +360,24 @@ clm,%,Mid Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,bet
 cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,mon,area: mean time: mean
 cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,day,area: mean time: mean
 cll,%,Low Level Cloud Fraction,cloud_area_fraction_in_atmosphere_layer,TIER2,below 680 hPa,6hr,area: mean time: mean
-rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
-rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
-rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
-rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
-rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
-rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,mon,area: mean time: mean
-rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,day,area: mean time: mean
-rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,6hr,area: mean time: mean
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: time: mean
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: time: mean
+rsdscs,W m-2,Surface Downwelling Clear-Sky Shortwave Radiation,surface_downwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: time: mean
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: time: mean
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: time: mean
+rldscs,W m-2,Surface Downwelling Clear-Sky Longwave Radiation,surface_downwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: time: mean
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: time: mean
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: time: mean
+rsuscs,W m-2,Surface Upwelling Clear-Sky Shortwave Radiation,surface_upwelling_shortwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: time: mean
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,mon,area: time: mean
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,day,area: time: mean
+rluscs,W m-2,Surface Upwelling Clear-Sky Longwave Radiation,surface_upwelling_longwave_flux_in_air_assuming_clear_sky,TIER2,,6hr,area: time: mean
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,mon,area: time: mean
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,day,area: time: mean
+rsutcs,W m-2,TOA Outgoing Clear-Sky Shortwave Radiation,toa_outgoing_shortwave_flux_assuming_clear_sky,TIER2,,6hr,area: time: mean
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,mon,area: time: mean
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,day,area: time: mean
+rlutcs,W m-2,TOA Outgoing Clear-Sky Longwave Radiation,toa_outgoing_longwave_flux_assuming_clear_sky,TIER2,,6hr,area: time: mean
 z0,m,Surface Roughness Length,surface_roughness_length,TIER2,,mon,area: mean time: mean
 z0,m,Surface Roughness Length,surface_roughness_length,TIER2,,day,area: mean time: mean
 CAPE,J kg-1,Convective Available Potential Energy,atmosphere_convective_available_potential_energy_wrt_surface,TIER2,,mon,area: mean time: mean
