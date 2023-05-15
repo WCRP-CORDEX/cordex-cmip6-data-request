@@ -1,4 +1,4 @@
-name: update cmor tables 
+name: update cmor tables
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -37,7 +37,7 @@ jobs:
         path: tables
         token: ${{ secrets.TABLE_ACCESS_TOKEN }}
 
-    - name: setup python 
+    - name: setup python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
