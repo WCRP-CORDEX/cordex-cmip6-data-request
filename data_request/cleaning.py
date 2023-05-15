@@ -158,6 +158,12 @@ def clean_df(df, drop=True):
     # handle special cases
     df = handle_special_cell_methods(df)
 
+    # set these to lowercase
+    lowercase = ["CAPE", "LI", "CIN", "CAPEmax", "LImax", "CINmax"]
+    lc = df.out_name.isin(lowercase)
+
+    df.loc[lc, "out_name"] = df[lc].out_name.str.lower()
+
     return df
 
 
