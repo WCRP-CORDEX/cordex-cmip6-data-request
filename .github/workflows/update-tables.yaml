@@ -30,11 +30,11 @@ jobs:
     - name: checkout cordex-cv
       uses: actions/checkout@v3
 
-    - name: checkout cordex cmor tables
+    - name: checkout cordex-cmip6-cmor-tables
       uses: actions/checkout@v3
       with:
         repository: WCRP-CORDEX/cordex-cmip6-cmor-tables
-        path: tables
+        path: cmor-tables
         token: ${{ secrets.TABLE_ACCESS_TOKEN }}
 
     - name: setup python
@@ -48,21 +48,25 @@ jobs:
         pip install -r ci/requirements.txt
         pip install pre-commit
 
-    - name: Update controlled vocabulary
+    - name: Install data request
+      run: |
+        python -m pip install --no-deps -e .
+
+    - name: Update cmor tables vocabulary
       run: |
         python scripts/create-tables.py
-        mv *.json tables/Tables
+        mv *.json cmor-tables/Tables
 
     - name: Check if there are any changes
       id: verify_diff
       run: |
-        cd tables
+        cd cmor-tables
         git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: Commit and push
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
-        cd tables
+        cd cmor-tables
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         (pre-commit run --all-files) || true
