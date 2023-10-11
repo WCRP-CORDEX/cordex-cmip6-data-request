@@ -346,7 +346,7 @@ def retrieve_cmip6_mip_tables():
 
 
 def add_coordinates(row):
-    return attrs.get_coordinates(row.out_name, row.long_name, row.frequency)
+    return attrs.get_coordinates(row.out_name, row.long_name, row.cell_methods)
 
 
 def add_cmip6_attributes(df):

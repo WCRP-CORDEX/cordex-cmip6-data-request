@@ -1,16 +1,30 @@
 import re
 
+import yaml
+
 from . import const
 
 
-def get_coordinates(out_name, long_name, frequency=None):
+def parse_cell_methods(cm_string):
+    # https://stackoverflow.com/questions/52340963/how-to-insert-a-newline-character-before-a-words-that-contains-a-colon
+    ys = re.sub(r"(\w+):", r"\n\1:", cm_string).strip()
+    d = yaml.safe_load(ys)
+
+    if "area" in d and d.get("area") is None:
+        d["area"] = d["time"]
+
+    return d
+
+
+def get_coordinates(out_name, long_name, cell_methods=None):
     """create the coordinates data request column entry
 
     Requires out_name and long_name which might determine the vertical
     coordinate. The frequency might determine the time coordinate.
 
     """
-    time = get_time_axis(frequency)
+    time_cell_method = parse_cell_methods(cell_methods).get("time", None)
+    time = get_time_axis(time_cell_method)
     vertical = derive_vertical_coord(out_name, long_name)
     coords = "longitude latitude"
     if time is not None:
@@ -55,11 +69,11 @@ def derive_vertical_coord(out_name, long_name=None):
         return {"type": "p", "key": key, "value": value}
 
 
-def get_time_axis(frequency):
+def get_time_axis(time_cell_method):
     """Returns time axis name based on frequency"""
-    if frequency == "fx" or frequency is None:
+    if not time_cell_method:
         return None
-    elif "Pt" in frequency:
+    elif time_cell_method == "point":
         return "time1"
     return "time"
 
