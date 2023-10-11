@@ -130,9 +130,10 @@ def clean_df(df, drop=True):
 
     df = handle_inconsistencies(df)  # set correct frequency name for point values
 
-    # set frequency
     subdaily_pt = (df["frequency"].isin(["1hr", "3hr", "6hr"])) & (df["ag"] == "i")
-    df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
+    # set frequency, we don't do that anymore,
+    # see https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/issues/24
+    # df.loc[subdaily_pt, "frequency"] = df[subdaily_pt].frequency + "Pt"
 
     # set cell methods depending on frequency
     df["cell_methods"] = "area: mean time: mean"
