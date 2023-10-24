@@ -1,3 +1,12 @@
+:construction_worker: **!!!This repository is about to be deprecated!!!**
+
+The actual code and tables are now split into different repos:
+
+* [data request table](https://github.com/WCRP-CORDEX/data-request-table)
+* [data request tools](https://github.com/WCRP-CORDEX/data-request-tools) (to create cmor json tables from the data request table)
+
+*This should other projects to reuse data request tools and manage their own requests more easily.*
+
 # CORDEX-CMIP6 data request
 
 [![github CI](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/actions/workflows/ci.yaml)
